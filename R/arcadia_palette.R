@@ -7,7 +7,7 @@
 #' @export
 #' @examples
 #' arcadia_palette("accent")
-arcadia_palette <- function(n = NULL, palette_name) {
+arcadia_palette <- function(palette_name, start = 1, end = NULL) {
   palettes <- list(
     accent = accent,
     accent_expanded = accent_expanded,
@@ -21,14 +21,15 @@ arcadia_palette <- function(n = NULL, palette_name) {
 
   values <- unname(palettes[[palette_name]])
 
-  if (!is.null(n)) {
-    if (n > length(values)) {
-      warning(sprintf("Palette %s only has %d colors, but %d are needed. Colors will be recycled.", palette_name, length(values), n))
-    }
-    values <- rep(values, length.out = n)
+  if (is.null(end)) {
+    end <- length(values)
   }
 
-  values
+  if (start > length(values) || end > length(values)) {
+    stop("Subsetting indices are out of range for the selected palette.")
+  }
+
+  values[start:end]
 }
 
 #' Arcadia color scales
@@ -40,14 +41,16 @@ arcadia_palette <- function(n = NULL, palette_name) {
 #' @param n Integer specifying the number of colors to return
 #' @rdname scale_color_arcadia
 #' @export
-scale_color_arcadia <- function(n, palette_name = "accent", ...) {
-  ggplot2::discrete_scale("color", "arcadia", palette = function(n) arcadia_palette(n, palette_name), ...)
+scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, ...) {
+  pal <- arcadia_palette(palette_name, start, end)
+  ggplot2::discrete_scale("color", "arcadia", palette = function(n) pal, ...)
 }
 
-#' @rdname scale_fill_arcadia
+#' @rdname scale_color_arcadia
 #' @export
-scale_fill_arcadia <- function(n, palette_name = "accent", ...) {
-  ggplot2::discrete_scale("fill", "arcadia", palette = function(n) arcadia_palette(n, palette_name), ...)
+scale_fill_arcadia <- function(palette_name = "accent", start = 1, end = NULL, ...) {
+  pal <- arcadia_palette(palette_name, start, end)
+  ggplot2::discrete_scale("fill", "arcadia", palette = function(n) pal, ...)
 }
 
 # Define the color palettes
