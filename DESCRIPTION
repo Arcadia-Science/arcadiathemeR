@@ -6,9 +6,13 @@ Author: Elizabeth McDaniel
 Maintainer: Elizabeth McDaniel <elizabeth.mcdaniel@arcadiascience.com>
 Description: This package adds themes and functions for creating plots
     that adhere to Arcadia Science style guidelines. 
-License: MIT
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown=TRUE)
+RoxygenNote: 7.3.1
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Imports:
+    ggplot2
