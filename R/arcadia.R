@@ -14,11 +14,14 @@ theme_arcadia <- function(base_size = 12, base_family = "sans") {
     panel.background = ggplot2::element_rect(fill = NA, color=NA),
     panel.border = ggplot2::element_blank(),
     panel.grid.major = ggplot2::element_blank(),
-    panel.gridminor = ggplot2::element_blank(),
+    panel.grid.minor = ggplot2::element_blank(),
 
     # tick specifications
     axis.ticks = ggplot2::element_line(color = "black", size = 0.5),
-    axis.line = ggplot2::element_line(color = "black", size = 0.5)
+    axis.line = ggplot2::element_line(color = "black", size = 0.5),
+
+    # legend specifications
+    legend.background = element_rect(fill = "#FDF8F2", color = NA),
 
   )
 }

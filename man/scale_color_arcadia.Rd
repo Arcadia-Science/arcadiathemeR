@@ -74,4 +74,4 @@ expand the scale by 5\% on each side for continuous variables, and by
 \description{
 Color scales using the colors from the Arcadia palettes.
 }
-\concept{colour arcadia}
+\concept{color arcadia}

@@ -11,7 +11,7 @@ arcadia_palette(palette_name)
 Possible values are "Neutral", "Accent", "Lighter_accents", "Accent_expanded", "Lighter_accent_expanded".}
 }
 \value{
-A function that can be used to generate the palette.
+A function that can be used to generate Arcadia palettes with different options
 }
 \description{
 Arcadia color palettes
