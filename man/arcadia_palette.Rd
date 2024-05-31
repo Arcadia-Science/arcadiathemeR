@@ -4,18 +4,22 @@
 \alias{arcadia_palette}
 \title{Arcadia color palettes}
 \usage{
-arcadia_palette(palette_name)
+arcadia_palette(palette_name, start = 1, end = NULL)
 }
 \arguments{
-\item{palette_name}{A character string specifying the name of the palette to retrieve.
-Possible values are "Neutral", "Accent", "Lighter_accents", "Accent_expanded", "Lighter_accent_expanded".}
+\item{palette_name}{A character string specifying the name of the palette to retrieve.}
+
+\item{start}{Starting position of color palette if want to use different subsets of the color palette}
+
+\item{end}{Ending position of color paletteif want to use different subsets of the color palette}
 }
 \value{
-A function that can be used to generate Arcadia palettes with different options
+A function that can be used to generate Arcadia palettes with different palette options
 }
 \description{
-Arcadia color palettes
+Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
 }
 \examples{
-arcadia_palette("Neutral")
+arcadia_palette("accent")
+arcadia_palette("accent", start=4, end=6)
 }

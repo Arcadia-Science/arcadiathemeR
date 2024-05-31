@@ -5,14 +5,16 @@
 \alias{scale_fill_arcadia}
 \title{Arcadia color scales}
 \usage{
-scale_color_arcadia(palette_name = "Accent", ...)
+scale_color_arcadia(palette_name = "accent", start = 1, end = NULL, ...)
 
-scale_color_arcadia(palette_name = "Accent", ...)
-
-scale_fill_arcadia(palette_name = "Accent", ...)
+scale_fill_arcadia(palette_name = "accent", start = 1, end = NULL, ...)
 }
 \arguments{
-\item{palette_name}{The name of the palette to use. Possible values are "Neutral", "Accent", "Lighter_accents", "Accent_expanded", "Lighter_accent_expanded".}
+\item{palette_name}{The name of the palette to use. Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"}
+
+\item{start}{Start index to subset the palette}
+
+\item{end}{End index to subset the palette}
 
 \item{...}{
   Arguments passed on to \code{\link[ggplot2:discrete_scale]{discrete_scale}}
@@ -74,4 +76,3 @@ expand the scale by 5\% on each side for continuous variables, and by
 \description{
 Color scales using the colors from the Arcadia palettes.
 }
-\concept{color arcadia}

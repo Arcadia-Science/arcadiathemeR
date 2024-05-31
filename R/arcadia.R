@@ -1,7 +1,7 @@
 #' Arcadia theme adhering to illustration style guides
 #'
-#' @param base_size
-#' @param base_family
+#' @param base_size Default size of test in plot
+#' @param base_family Default font family in plot
 #'
 #' @return Reformatted ggplot with Arcadia Science style theme
 #' @export
@@ -21,7 +21,7 @@ theme_arcadia <- function(base_size = 12, base_family = "sans") {
     axis.line = ggplot2::element_line(color = "black", size = 0.5),
 
     # legend specifications
-    legend.background = element_rect(fill = "#FDF8F2", color = NA),
+    legend.background = ggplot2::element_rect(fill = "#FDF8F2", color = NA),
 
   )
 }

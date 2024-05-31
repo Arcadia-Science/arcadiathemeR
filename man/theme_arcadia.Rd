@@ -7,7 +7,9 @@
 theme_arcadia(base_size = 12, base_family = "sans")
 }
 \arguments{
-\item{base_family}{}
+\item{base_size}{Default size of test in plot}
+
+\item{base_family}{Default font family in plot}
 }
 \value{
 Reformatted ggplot with Arcadia Science style theme

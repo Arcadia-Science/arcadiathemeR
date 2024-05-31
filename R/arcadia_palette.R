@@ -1,12 +1,16 @@
 #' Arcadia color palettes
 #'
 #' @param palette_name A character string specifying the name of the palette to retrieve.
-#' Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
+#' @param start Starting position of color palette if want to use different subsets of the color palette
+#' @param end Ending position of color paletteif want to use different subsets of the color palette
+#'
+#' @description Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
 #'
 #' @return A function that can be used to generate Arcadia palettes with different palette options
 #' @export
 #' @examples
 #' arcadia_palette("accent")
+#' arcadia_palette("accent", start=4, end=6)
 arcadia_palette <- function(palette_name, start = 1, end = NULL) {
   palettes <- list(
     accent = accent,
@@ -38,7 +42,9 @@ arcadia_palette <- function(palette_name, start = 1, end = NULL) {
 #'
 #' @inheritParams ggplot2::scale_colour_hue
 #' @param palette_name The name of the palette to use. Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
-#' @param n Integer specifying the number of colors to return
+#' @param start Start index to subset the palette
+#' @param end End index to subset the palette
+
 #' @rdname scale_color_arcadia
 #' @export
 scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, ...) {
