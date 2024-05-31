@@ -17,3 +17,17 @@ Reformatted ggplot with Arcadia Science style theme
 \description{
 Arcadia theme adhering to illustration style guides
 }
+\examples{
+
+\dontrun{
+ggplot(data=mtcars, aes(x=hp, y=mpg, color = as.factor(cyl))) +
+geom_point(size=2.5) +
+theme_arcadia()
+}
+
+\dontrun{
+ggplot(data=mtcars, aes(x=hp, fill = as.factor(cyl))) +
+geom_density(alpha=0.8) +
+theme_arcadia()
+}
+}
