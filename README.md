@@ -39,7 +39,7 @@ theme_arcadia() +
 scale_color_arcadia("accent")
 ```
 
-![](man/figures/README-unnamed-chunk-2-1.png)<!-- -->
+![](man/figures/README-base_use-1.png)<!-- -->
 
 You can also select different indices of colors from the palettes within
 the `scale` function:
@@ -51,7 +51,7 @@ theme_arcadia() +
 scale_fill_arcadia("accent_expanded", start=2, end=5)
 ```
 
-![](man/figures/README-unnamed-chunk-3-1.png)<!-- -->
+![](man/figures/README-scale_index-1.png)<!-- -->
 
 ## Development
 

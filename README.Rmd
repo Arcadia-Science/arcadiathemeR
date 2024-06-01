@@ -31,7 +31,7 @@ library(arcadiathemeR)
 
 The arcadiathemeR package is modeled after the [`ggthemes` package](https://github.com/jrnold/ggthemes), layering on the plot theme and color palettes in the same fashion as the `ggthemes` package. 
 
-```{r}
+```{r, base_use}
 library(ggplot2)
 library(arcadiathemeR)
 
@@ -43,7 +43,7 @@ scale_color_arcadia("accent")
 
 You can also select different indices of colors from the palettes within the `scale` function:
 
-```{r}
+```{r, scale_index}
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
 geom_density(alpha = 0.8) +
 theme_arcadia() +
