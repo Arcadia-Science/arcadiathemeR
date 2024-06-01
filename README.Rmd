@@ -18,7 +18,7 @@ The goal of the arcadiathemeR package is to create ggplot2-style plots in R that
 You can install arcadiathemeR from Github using the `remotes` package. If you do not have this package installed you will need to do so before installing the `arcadiathemeR` package.
 ```r
 # install.packages("remotes")
-remote::install_github("Arcadia-Science/arcadiathemeR")
+remotes::install_github("Arcadia-Science/arcadiathemeR")
 ```
 
 ## Usage

@@ -12,7 +12,7 @@ installing the `arcadiathemeR` package.
 
 ``` r
 # install.packages("remotes")
-remote::install_github("Arcadia-Science/arcadiathemeR")
+remotes::install_github("Arcadia-Science/arcadiathemeR")
 ```
 
 ## Usage
