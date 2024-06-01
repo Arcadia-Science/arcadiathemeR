@@ -73,15 +73,15 @@ scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, 
 #' @examples
 #'
 #' \dontrun{
-#' ggplot(data=mtcars, aes(x=hp, fill = as.factor(cyl))) +
-#' geom_point(size=2.5) +
+#' ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
+#' geom_density(alpha = 0.8) +
 #' theme_arcadia() +
 #' scale_fill_arcadia("accent")
 #' }
 #'
 #' \dontrun{
-#' ggplot(data=mtcars, aes(x=hp, fill = as.factor(cyl))) +
-#' geom_point(size=2.5) +
+#' ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
+#' geom_density(alpha = 0.8) +
 #' theme_arcadia() +
 #' scale_fill_arcadia("accent", start=2, end=5)
 #' }
