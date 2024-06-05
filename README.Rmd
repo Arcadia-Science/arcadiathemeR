@@ -36,18 +36,18 @@ library(ggplot2)
 library(arcadiathemeR)
 
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
-geom_point(size=2.5) +
-theme_arcadia() +
-scale_color_arcadia("accent")
+  geom_point(size=2.5) +
+  theme_arcadia() +
+  scale_color_arcadia("accent")
 ```
 
 You can also select different indices of colors from the palettes within the `scale` function:
 
 ```{r, scale_index}
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
-geom_density(alpha = 0.8) +
-theme_arcadia() +
-scale_fill_arcadia("accent_expanded", start=2, end=5)
+  geom_density(alpha = 0.8) +
+  theme_arcadia() +
+  scale_fill_arcadia("accent_expanded", start=2, end=5)
 
 ```
 

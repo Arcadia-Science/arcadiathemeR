@@ -54,14 +54,14 @@ arcadia_palette <- function(palette_name, start = 1, end = NULL) {
 #' ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
 #'   geom_point(size=2.5) +
 #'   theme_arcadia() +
-#'  scale_color_arcadia("accent")
+#'   scale_color_arcadia("accent")
 #' }
 #'
 #' \dontrun{
 #' ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
 #'  geom_point(size=2.5) +
 #'  theme_arcadia() +
-#'   scale_color_arcadia("accent", start=2, end=5)
+#'  scale_color_arcadia("accent", start=2, end=5)
 #' }
 scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, ...) {
   pal <- arcadia_palette(palette_name, start, end)

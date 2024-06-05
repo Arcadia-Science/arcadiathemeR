@@ -34,9 +34,9 @@ library(ggplot2)
 library(arcadiathemeR)
 
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
-geom_point(size=2.5) +
-theme_arcadia() +
-scale_color_arcadia("accent")
+  geom_point(size=2.5) +
+  theme_arcadia() +
+  scale_color_arcadia("accent")
 ```
 
 ![](man/figures/README-base_use-1.png)<!-- -->
@@ -46,9 +46,9 @@ the `scale` function:
 
 ``` r
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
-geom_density(alpha = 0.8) +
-theme_arcadia() +
-scale_fill_arcadia("accent_expanded", start=2, end=5)
+  geom_density(alpha = 0.8) +
+  theme_arcadia() +
+  scale_fill_arcadia("accent_expanded", start=2, end=5)
 ```
 
 ![](man/figures/README-scale_index-1.png)<!-- -->
@@ -58,7 +58,7 @@ scale_fill_arcadia("accent_expanded", start=2, end=5)
 To install the package locally while in development, follow the
 instructions
 [here](https://stackoverflow.com/questions/21171142/how-to-install-r-package-from-private-repo-using-devtools-install-github).
-Breifly:
+Briefly:
 
 1.  Add a `.Renviron` file to the folder where you are going to install
     this package
