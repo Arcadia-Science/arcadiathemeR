@@ -1,6 +1,6 @@
 #' Arcadia theme adhering to illustration style guides
 #'
-#' @param base_size Default size of test in plot
+#' @param base_size Default size of text in plot
 #' @param base_family Default font family in plot
 #'
 #' @return Reformatted ggplot with Arcadia Science style theme
