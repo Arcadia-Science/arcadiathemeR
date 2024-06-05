@@ -10,14 +10,14 @@
 #'
 #' \dontrun{
 #' ggplot(data=mtcars, aes(x=hp, y=mpg, color = as.factor(cyl))) +
-#' geom_point(size=2.5) +
-#' theme_arcadia()
+#'   geom_point(size=2.5) +
+#'   theme_arcadia()
 #' }
 #'
 #' \dontrun{
 #' ggplot(data=mtcars, aes(x=hp, fill = as.factor(cyl))) +
-#' geom_density(alpha=0.8) +
-#' theme_arcadia()
+#'   geom_density(alpha=0.8) +
+#'   theme_arcadia()
 #' }
 theme_arcadia <- function(base_size = 12, base_family = "sans") {
   ggplot2::theme(
@@ -37,5 +37,3 @@ theme_arcadia <- function(base_size = 12, base_family = "sans") {
 
   )
 }
-
-

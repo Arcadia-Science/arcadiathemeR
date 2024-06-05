@@ -52,16 +52,16 @@ arcadia_palette <- function(palette_name, start = 1, end = NULL) {
 #'
 #' \dontrun{
 #' ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
-#' geom_point(size=2.5) +
-#' theme_arcadia() +
-#' scale_color_arcadia("accent")
+#'   geom_point(size=2.5) +
+#'   theme_arcadia() +
+#'  scale_color_arcadia("accent")
 #' }
 #'
 #' \dontrun{
 #' ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
-#' geom_point(size=2.5) +
-#' theme_arcadia() +
-#' scale_color_arcadia("accent", start=2, end=5)
+#'  geom_point(size=2.5) +
+#'  theme_arcadia() +
+#'   scale_color_arcadia("accent", start=2, end=5)
 #' }
 scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, ...) {
   pal <- arcadia_palette(palette_name, start, end)
@@ -81,9 +81,9 @@ scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, 
 #'
 #' \dontrun{
 #' ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
-#' geom_density(alpha = 0.8) +
-#' theme_arcadia() +
-#' scale_fill_arcadia("accent", start=2, end=5)
+#'  geom_density(alpha = 0.8) +
+#'  theme_arcadia() +
+#'  scale_fill_arcadia("accent", start=2, end=5)
 #' }
 scale_fill_arcadia <- function(palette_name = "accent", start = 1, end = NULL, ...) {
   pal <- arcadia_palette(palette_name, start, end)
@@ -107,4 +107,3 @@ accent_ordered <- c('#5088C5', '#F28360', '#F7B846', '#97CD78',
 light_ordered <- c('#C6E7F4', '#F8C5C1', '#F5E4BE', '#B5BEA4',
                    '#DCBFFC', '#B6C8D4', '#DAD3C7', '#DA9085',
                    '#F5CBE4', '#D1EADF', '#BABEE0', '#F1E8DA')
-
