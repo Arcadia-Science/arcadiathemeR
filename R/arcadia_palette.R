@@ -2,7 +2,7 @@
 #'
 #' @param palette_name A character string specifying the name of the palette to retrieve.
 #' @param start Starting position of color palette if want to use different subsets of the color palette
-#' @param end Ending position of color paletteif want to use different subsets of the color palette
+#' @param end Ending position of color palette if want to use different subsets of the color palette
 #'
 #' @description Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
 #'
