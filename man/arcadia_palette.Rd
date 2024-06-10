@@ -11,7 +11,7 @@ arcadia_palette(palette_name, start = 1, end = NULL)
 
 \item{start}{Starting position of color palette if want to use different subsets of the color palette}
 
-\item{end}{Ending position of color paletteif want to use different subsets of the color palette}
+\item{end}{Ending position of color palette if want to use different subsets of the color palette}
 }
 \value{
 A function that can be used to generate Arcadia palettes with different palette options

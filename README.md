@@ -35,7 +35,7 @@ library(arcadiathemeR)
 
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   geom_point(size=2.5) +
-  theme_arcadia() +
+  theme_arcadia(base_family = "SuisseIntl-Regular") +
   scale_color_arcadia("accent")
 ```
 
@@ -47,7 +47,7 @@ the `scale` function:
 ``` r
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
   geom_density(alpha = 0.8) +
-  theme_arcadia() +
+  theme_arcadia(base_family = "SuisseIntl-Regular") +
   scale_fill_arcadia("accent_expanded", start=2, end=5)
 ```
 

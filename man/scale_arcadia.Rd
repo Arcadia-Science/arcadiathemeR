@@ -71,16 +71,16 @@ Color scales using the colors from the Arcadia palettes.
 
 \dontrun{
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
-geom_point(size=2.5) +
-theme_arcadia() +
-scale_color_arcadia("accent")
+  geom_point(size=2.5) +
+  theme_arcadia() +
+  scale_color_arcadia("accent")
 }
 
 \dontrun{
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
-geom_point(size=2.5) +
-theme_arcadia() +
-scale_color_arcadia("accent", start=2, end=5)
+ geom_point(size=2.5) +
+ theme_arcadia() +
+ scale_color_arcadia("accent", start=2, end=5)
 }
 
 \dontrun{
@@ -92,9 +92,9 @@ scale_fill_arcadia("accent")
 
 \dontrun{
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
-geom_density(alpha = 0.8) +
-theme_arcadia() +
-scale_fill_arcadia("accent", start=2, end=5)
+ geom_density(alpha = 0.8) +
+ theme_arcadia() +
+ scale_fill_arcadia("accent", start=2, end=5)
 }
 }
 \concept{color arcadia}
