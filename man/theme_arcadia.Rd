@@ -4,12 +4,18 @@
 \alias{theme_arcadia}
 \title{Arcadia theme adhering to illustration style guides}
 \usage{
-theme_arcadia(base_size = 12)
+theme_arcadia(
+  base_size = 12,
+  x_axis_type = "numerical",
+  y_axis_type = "numerical"
+)
 }
 \arguments{
 \item{base_size}{Default size of text in plot}
 
-\item{base_family}{Default font family in plot}
+\item{x_axis_type}{Type of the x-axis data("categorical" or "numerical")}
+
+\item{y_axis_type}{Type of the y-axis data("categorical" or "numerical")}
 }
 \value{
 Layers onto an existing ggplot2 plot with a theme adhering to Arcadia style guidelines
