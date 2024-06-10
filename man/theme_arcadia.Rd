@@ -4,7 +4,7 @@
 \alias{theme_arcadia}
 \title{Arcadia theme adhering to illustration style guides}
 \usage{
-theme_arcadia(base_size = 12, base_family = "NULL")
+theme_arcadia(base_size = 12)
 }
 \arguments{
 \item{base_size}{Default size of text in plot}

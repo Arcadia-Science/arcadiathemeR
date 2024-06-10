@@ -16,7 +16,6 @@ load_arcadia_font <- function(custom_font = "Suisse", fallback_font = "sans") {
     for (font_path in font_files) {
       font_name <- tools::file_path_sans_ext(basename(font_path))
       sysfonts::font_add(family = font_name, regular = font_path)
-      cat(sprintf("Loaded font: %s from %s\n", font_name, font_path))
     }
     return(custom_font)
   } else {

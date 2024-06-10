@@ -19,10 +19,8 @@
 #'   geom_density(alpha=0.8) +
 #'   theme_arcadia()
 #' }
-theme_arcadia <- function(base_size = 12, base_family = "NULL") {
-  if (is.null(base_family)) {
-    base_family <- load_arcadia_font()
-  }
+theme_arcadia <- function(base_size = 12) {
+  base_family <- load_arcadia_font("SuisseIntl-Regular")
   ggplot2::theme_minimal(base_size = base_size, base_family = base_family) +
 
     # font specifications
