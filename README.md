@@ -41,14 +41,31 @@ ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
 
 ![](man/figures/README-base_use-1.png)<!-- -->
 
+By default the `theme_arcadia()` function assumes that both axes are
+numerical data. Since we have different font and plot styles for
+categorical data, you can specify if the axis is categorical with:
+
+``` r
+
+ggplot(data=diamonds, aes(x=cut, fill=cut)) +
+  geom_bar() +
+  theme_arcadia(x_axis_type = "categorical") +
+  scale_fill_arcadia("accent") +
+  scale_y_continuous(expand=c(0,0)) # removes whitespace between axis and bars
+```
+
+![](man/figures/README-categorical_plot-1.png)<!-- -->
+
 You can also select different indices of colors from the palettes within
 the `scale` function:
 
 ``` r
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
-  geom_density(alpha = 0.8) +
+  geom_density(alpha = 0.8, color = NA) + # remove border line from filled-in density plots
   theme_arcadia() +
-  scale_fill_arcadia("accent_expanded", start=2, end=5)
+  scale_fill_arcadia("accent_expanded", start=2, end=5) +
+  scale_y_continuous(expand=c(0,0)) +
+  scale_x_continuous(expand=c(0,0)) # remove whitespace between both axes and the plot
 ```
 
 ![](man/figures/README-scale_index-1.png)<!-- -->
