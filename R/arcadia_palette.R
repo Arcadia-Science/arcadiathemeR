@@ -3,6 +3,7 @@
 #' @param palette_name A character string specifying the name of the palette to retrieve.
 #' @param start Starting position of color palette if want to use different subsets of the color palette
 #' @param end Ending position of color palette if want to use different subsets of the color palette
+#' @param reverse Boolean indicating whether to reverse the palette colors
 #'
 #' @description Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
 #'
@@ -11,7 +12,7 @@
 #' @examples
 #' arcadia_palette("accent")
 #' arcadia_palette("accent", start=4, end=6)
-arcadia_palette <- function(palette_name, start = 1, end = NULL) {
+arcadia_palette <- function(palette_name, start = 1, end = NULL, reverse = FALSE) {
   palettes <- list(
     accent = accent,
     accent_expanded = accent_expanded,
@@ -27,6 +28,10 @@ arcadia_palette <- function(palette_name, start = 1, end = NULL) {
 
   if (is.null(end)) {
     end <- length(values)
+  }
+
+  if (reverse) {
+    values <- rev(values)
   }
 
   if (start > length(values) || end > length(values)) {

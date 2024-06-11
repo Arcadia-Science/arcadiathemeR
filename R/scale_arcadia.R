@@ -8,6 +8,7 @@
 #' @param palette_name The name of the palette to use. Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
 #' @param start Start index to subset the palette
 #' @param end End index to subset the palette
+#' @param reverse A boolean indicating to reverse the palette colors
 
 #' @export
 #' @examples
@@ -25,8 +26,8 @@
 #'  theme_arcadia() +
 #'  scale_color_arcadia("accent", start=2, end=5)
 #' }
-scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, ...) {
-  pal <- arcadia_palette(palette_name, start, end)
+scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, reverse = FALSE, ...) {
+  pal <- arcadia_palette(palette_name, start, end, reverse)
   ggplot2::discrete_scale("color", "arcadia", palette = function(n) pal, ...)
 }
 
@@ -47,7 +48,7 @@ scale_color_arcadia <- function(palette_name = "accent", start = 1, end = NULL, 
 #'  theme_arcadia() +
 #'  scale_fill_arcadia("accent", start=2, end=5)
 #' }
-scale_fill_arcadia <- function(palette_name = "accent", start = 1, end = NULL, ...) {
-  pal <- arcadia_palette(palette_name, start, end)
+scale_fill_arcadia <- function(palette_name = "accent", start = 1, end = NULL, reverse = FALSE, ...) {
+  pal <- arcadia_palette(palette_name, start, end, reverse)
   ggplot2::discrete_scale("fill", "arcadia", palette = function(n) pal, ...)
 }

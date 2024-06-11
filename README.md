@@ -50,7 +50,7 @@ categorical data, you can specify if the axis is categorical with:
 ggplot(data=diamonds, aes(x=cut, fill=cut)) +
   geom_bar() +
   theme_arcadia(x_axis_type = "categorical") +
-  scale_fill_arcadia("accent") +
+  scale_fill_arcadia("accent", reverse = TRUE) +
   scale_y_continuous(expand=c(0,0)) # removes whitespace between axis and bars
 ```
 
