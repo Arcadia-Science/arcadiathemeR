@@ -35,7 +35,7 @@ library(arcadiathemeR)
 
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   geom_point(size=2.5) +
-  theme_arcadia() +
+  theme_arcadia(x_axis_type = "numerical") +
   scale_color_arcadia("accent")
 ```
 

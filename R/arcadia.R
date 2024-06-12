@@ -28,6 +28,9 @@ theme_arcadia <- function(base_size = 12, x_axis_type = "numerical", y_axis_type
   y_axis_family <- if (y_axis_type == "categorical") "SuisseIntl-Regular" else "SuisseIntlMono-Regular"
   x_axis_label_family <- "SuisseIntl-Regular"
   y_axis_label_family <- "SuisseIntl-Regular"
+  legend_label_family <- "SuisseIntl-Regular"
+  legend_text_family <- if (x_axis_type == "categorical" || y_axis_type == "categorical") "SuisseIntl-Regular" else "SuisseIntlMono-Regular" # check both because depends on either to change the font
+
 
   x_axis_ticks <- if (x_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.5)
   y_axis_ticks <- if (y_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.5)
@@ -41,8 +44,9 @@ theme_arcadia <- function(base_size = 12, x_axis_type = "numerical", y_axis_type
       axis.title.y = ggplot2::element_text(family = y_axis_label_family, size = base_size),
       axis.text.x = ggplot2::element_text(family = x_axis_family, size = base_size),
       axis.text.y = ggplot2::element_text(family = y_axis_family, size = base_size),
-      legend.title = ggplot2::element_text(family = "SuisseIntl-Regular", size = base_size * 0.8),
-      legend.text = ggplot2::element_text(family = "SuisseIntl-Regular", size = base_size * 0.7),
+      legend.title = ggplot2::element_text(family = legend_label_family, size = base_size * 0.8),
+      legend.text = ggplot2::element_text(family = legend_text_family, size = base_size * 0.7),
+
 
       # background specifications
       plot.background = ggplot2::element_rect(fill = "#FDF8F2", color = NA),
