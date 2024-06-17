@@ -7,19 +7,27 @@
 #' @return Custom font families or fallback font to use in plots.
 #' @export
 #'
-load_arcadia_font <- function(custom_font = "Suisse", fallback_font = "sans") {
+load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
   showtext::showtext_auto(enable = TRUE)
 
-  font_files <- list.files(path = "~/Library/Fonts", pattern = custom_font, full.names = TRUE)
+  # get all available fonts across the system
+  available_fonts <- systemfonts::system_fonts()
 
-  if (length(font_files) > 0) {
-    for (font_path in font_files) {
+  # get the custom font
+  custom_font_files <- available_fonts[grepl(custom_font, available_fonts$family), ]
+
+  if (nrow(custom_font_files) > 0) {
+    for (i in 1:nrow(custom_font_files)) {
+      font_path <- custom_font_files$path[i]
       font_name <- tools::file_path_sans_ext(basename(font_path))
       sysfonts::font_add(family = font_name, regular = font_path)
     }
     return(custom_font)
   } else {
-    cat(sprintf("Custom font '%s' not found. Using fallback font '%s'.\n", custom_font, fallback_font))
+    cat(sprintf("Custom font '%s' not found. Using fallback font '%s'. \n", custom_font, fallback_font))
     return(fallback_font)
   }
 }
+
+# load all Suisse fonts and store
+loaded_suisse_fonts <- load_arcadia_fonts("Suisse")

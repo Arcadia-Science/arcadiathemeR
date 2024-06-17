@@ -37,6 +37,377 @@ ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   geom_point(size=2.5) +
   theme_arcadia(x_axis_type = "numerical") +
   scale_color_arcadia("accent")
+#> Custom font 'SuisseIntlMono-Regular' not found. Using fallback font 'sans'. 
+#> Custom font 'SuisseIntl-Regular' not found. Using fallback font 'sans'.
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
 ```
 
 ![](man/figures/README-base_use-1.png)<!-- -->
@@ -52,6 +423,302 @@ ggplot(data=diamonds, aes(x=cut, fill=cut)) +
   theme_arcadia(x_axis_type = "categorical") +
   scale_fill_arcadia("accent", reverse = TRUE) +
   scale_y_continuous(expand=c(0,0)) # removes whitespace between axis and bars
+#> Custom font 'SuisseIntlMono-Regular' not found. Using fallback font 'sans'. 
+#> Custom font 'SuisseIntl-Regular' not found. Using fallback font 'sans'.
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_stringMetric, as.graphicsAnnot(x$label)): font family
+#> 'SuisseIntl-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
 ```
 
 ![](man/figures/README-categorical_plot-1.png)<!-- -->
@@ -66,6 +733,219 @@ ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
   scale_fill_arcadia("accent_expanded", start=2, end=5) +
   scale_y_continuous(expand=c(0,0)) +
   scale_x_continuous(expand=c(0,0)) # remove whitespace between both axes and the plot
+#> Custom font 'SuisseIntlMono-Regular' not found. Using fallback font 'sans'. 
+#> Custom font 'SuisseIntl-Regular' not found. Using fallback font 'sans'.
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call(C_textBounds, as.graphicsAnnot(x$label), x$x, x$y, : font
+#> family 'SuisseIntl-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntl-Regular' not found, will use 'sans' instead
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
+
+#> Warning in grid.Call.graphics(C_text, as.graphicsAnnot(x$label), x$x, x$y, :
+#> font family 'SuisseIntlMono-Regular' not found, will use 'sans' instead
 ```
 
 ![](man/figures/README-scale_index-1.png)<!-- -->

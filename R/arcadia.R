@@ -21,8 +21,11 @@
 #'   theme_arcadia()
 #' }
 theme_arcadia <- function(base_size = 12, x_axis_type = "numerical", y_axis_type = "numerical") {
-  load_arcadia_font("SuisseIntlMono-Regular")
-  load_arcadia_font("SuisseIntl-Regular")
+  # ensure fonts are loaded
+  if (length(loaded_suisse_fonts) == 0) {
+    cat("No Suisse fonts loaded. Using fallback font. \n")
+    return(ggplot2::theme_minimal(base_size = base_size))
+  }
 
   x_axis_family <- if (x_axis_type == "categorical") "SuisseIntl-Regular" else "SuisseIntlMono-Regular"
   y_axis_family <- if (y_axis_type == "categorical") "SuisseIntl-Regular" else "SuisseIntlMono-Regular"
