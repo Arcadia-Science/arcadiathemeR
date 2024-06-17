@@ -44,7 +44,6 @@ ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
 By default the `theme_arcadia()` function assumes that both axes are numerical data. Since we have different font and plot styles for categorical data, you can specify if the axis is categorical with: 
 
 ```{r, categorical_plot}
-
 ggplot(data=diamonds, aes(x=cut, fill=cut)) +
   geom_bar() +
   theme_arcadia(x_axis_type = "categorical") +
@@ -62,7 +61,6 @@ ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
   scale_fill_arcadia("accent_expanded", start=2, end=5) +
   scale_y_continuous(expand=c(0,0)) +
   scale_x_continuous(expand=c(0,0)) # remove whitespace between both axes and the plot
-
 ```
 
 ## Development

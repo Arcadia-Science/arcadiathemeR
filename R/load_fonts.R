@@ -28,6 +28,3 @@ load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
     return(fallback_font)
   }
 }
-
-# load all Suisse fonts and store
-loaded_suisse_fonts <- load_arcadia_fonts("Suisse")

@@ -21,6 +21,9 @@
 #'   theme_arcadia()
 #' }
 theme_arcadia <- function(base_size = 12, x_axis_type = "numerical", y_axis_type = "numerical") {
+  # load all Suisse fonts and store
+  loaded_suisse_fonts <- load_arcadia_fonts("Suisse")
+
   # ensure fonts are loaded
   if (length(loaded_suisse_fonts) == 0) {
     cat("No Suisse fonts loaded. Using fallback font. \n")
