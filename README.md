@@ -84,6 +84,7 @@ Briefly:
 4.  Install from a specific branch with:
 
 ``` r
+# TODO change to main once deployed
 remotes::install_github("Arcadia-Science/arcadiathemeR", \
 ref="EAM/sysfonts", \
 auth_token=Sys.getenv("GITHUBTOKEN"))

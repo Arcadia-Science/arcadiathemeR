@@ -71,6 +71,7 @@ To install the package locally while in development, follow the instructions [he
 3. Save the token in the `.Renviron` file as `GITHUBTOKEN=<string>`
 4. Install from a specific branch with: 
 ```r
+# TODO change to main once deployed
 remotes::install_github("Arcadia-Science/arcadiathemeR", \
 ref="EAM/sysfonts", \
 auth_token=Sys.getenv("GITHUBTOKEN"))

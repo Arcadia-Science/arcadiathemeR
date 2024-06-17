@@ -23,6 +23,7 @@
 theme_arcadia <- function(base_size = 12, x_axis_type = "numerical", y_axis_type = "numerical") {
   # load all Suisse fonts and store
   loaded_suisse_fonts <- load_arcadia_fonts("Suisse")
+  background_fill <- "#FDF8F2"
 
   # ensure fonts are loaded
   if (length(loaded_suisse_fonts) == 0) {
@@ -44,30 +45,30 @@ theme_arcadia <- function(base_size = 12, x_axis_type = "numerical", y_axis_type
   ggplot2::theme_minimal(base_size = base_size) +
 
     # font specifications
-    ggplot2::theme(
-      plot.title = ggplot2::element_text(family = "SuisseIntl-Regular", size = base_size * 1.2, face = "bold"),
-      axis.title.x = ggplot2::element_text(family = x_axis_label_family, size = base_size),
-      axis.title.y = ggplot2::element_text(family = y_axis_label_family, size = base_size),
-      axis.text.x = ggplot2::element_text(family = x_axis_family, size = base_size),
-      axis.text.y = ggplot2::element_text(family = y_axis_family, size = base_size),
-      legend.title = ggplot2::element_text(family = legend_label_family, size = base_size * 0.8),
-      legend.text = ggplot2::element_text(family = legend_text_family, size = base_size * 0.7),
+  ggplot2::theme(
+    plot.title = ggplot2::element_text(family = "SuisseIntl-Regular", size = base_size * 1.2, face = "bold"),
+    axis.title.x = ggplot2::element_text(family = x_axis_label_family, size = base_size),
+    axis.title.y = ggplot2::element_text(family = y_axis_label_family, size = base_size),
+    axis.text.x = ggplot2::element_text(family = x_axis_family, size = base_size),
+    axis.text.y = ggplot2::element_text(family = y_axis_family, size = base_size),
+    legend.title = ggplot2::element_text(family = legend_label_family, size = base_size * 0.8),
+    legend.text = ggplot2::element_text(family = legend_text_family, size = base_size * 0.7),
 
 
-      # background specifications
-      plot.background = ggplot2::element_rect(fill = "#FDF8F2", color = NA),
-      panel.background = ggplot2::element_rect(fill = NA, color=NA),
-      panel.border = ggplot2::element_blank(),
-      panel.grid.major = ggplot2::element_blank(),
-      panel.grid.minor = ggplot2::element_blank(),
+    # background specifications
+    plot.background = ggplot2::element_rect(fill = background_fill, color = NA),
+    panel.background = ggplot2::element_rect(fill = NA, color=NA),
+    panel.border = ggplot2::element_blank(),
+    panel.grid.major = ggplot2::element_blank(),
+    panel.grid.minor = ggplot2::element_blank(),
 
-      # tick specifications
-      axis.ticks.x = x_axis_ticks,
-      axis.ticks.y = y_axis_ticks,
-      axis.line = ggplot2::element_line(color="black", size = 0.5),
+    # tick specifications
+    axis.ticks.x = x_axis_ticks,
+    axis.ticks.y = y_axis_ticks,
+    axis.line = ggplot2::element_line(color="black", size = 0.5),
 
-      # legend specifications
-      legend.background = ggplot2::element_rect(fill = "#FDF8F2", color = NA),
+    # legend specifications
+    legend.background = ggplot2::element_rect(fill = background_fill, color = NA),
 
     )
 }
