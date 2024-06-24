@@ -24,7 +24,7 @@
 
 theme_arcadia <- function(base_size = 12, x_axis_type = "numerical", y_axis_type = "numerical") {
   # load all Suisse fonts and store
-  loaded_suisse_fonts <- load_arcadia_fonts("Suisse")
+  loaded_suisse_fonts <- load_arcadia_fonts()
 
   x_axis_family <- if (x_axis_type == "categorical") categorical_font else numerical_font
   y_axis_family <- if (y_axis_type == "categorical") categorical_font else numerical_font
