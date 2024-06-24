@@ -26,12 +26,6 @@ theme_arcadia <- function(base_size = 12, x_axis_type = "numerical", y_axis_type
   # load all Suisse fonts and store
   loaded_suisse_fonts <- load_arcadia_fonts("Suisse")
 
-  # ensure fonts are loaded
-  if (length(loaded_suisse_fonts) == 0) {
-    cat("No Suisse fonts loaded. Using fallback font. \n")
-    return(ggplot2::theme_minimal(base_size = base_size))
-  }
-
   x_axis_family <- if (x_axis_type == "categorical") categorical_font else numerical_font
   y_axis_family <- if (y_axis_type == "categorical") categorical_font else numerical_font
   x_axis_label_family <- categorical_font
