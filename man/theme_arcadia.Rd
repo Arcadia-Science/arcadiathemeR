@@ -4,15 +4,21 @@
 \alias{theme_arcadia}
 \title{Arcadia theme adhering to illustration style guides}
 \usage{
-theme_arcadia(base_size = 12, base_family = "sans")
+theme_arcadia(
+  base_size = 12,
+  x_axis_type = "numerical",
+  y_axis_type = "numerical"
+)
 }
 \arguments{
-\item{base_size}{Default size of test in plot}
+\item{base_size}{Default size of text in plot}
 
-\item{base_family}{Default font family in plot}
+\item{x_axis_type}{Type of the x-axis data("categorical" or "numerical")}
+
+\item{y_axis_type}{Type of the y-axis data("categorical" or "numerical")}
 }
 \value{
-Reformatted ggplot with Arcadia Science style theme
+Layers onto an existing ggplot2 plot with a theme adhering to Arcadia style guidelines
 }
 \description{
 Arcadia theme adhering to illustration style guides
@@ -21,13 +27,13 @@ Arcadia theme adhering to illustration style guides
 
 \dontrun{
 ggplot(data=mtcars, aes(x=hp, y=mpg, color = as.factor(cyl))) +
-geom_point(size=2.5) +
-theme_arcadia()
+  geom_point(size=2.5) +
+  theme_arcadia()
 }
 
 \dontrun{
 ggplot(data=mtcars, aes(x=hp, fill = as.factor(cyl))) +
-geom_density(alpha=0.8) +
-theme_arcadia()
+  geom_density(alpha=0.8) +
+  theme_arcadia()
 }
 }

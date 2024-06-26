@@ -4,14 +4,16 @@
 \alias{arcadia_palette}
 \title{Arcadia color palettes}
 \usage{
-arcadia_palette(palette_name, start = 1, end = NULL)
+arcadia_palette(palette_name, start = 1, end = NULL, reverse = FALSE)
 }
 \arguments{
 \item{palette_name}{A character string specifying the name of the palette to retrieve.}
 
 \item{start}{Starting position of color palette if want to use different subsets of the color palette}
 
-\item{end}{Ending position of color paletteif want to use different subsets of the color palette}
+\item{end}{Ending position of color palette if want to use different subsets of the color palette}
+
+\item{reverse}{Boolean indicating whether to reverse the palette colors}
 }
 \value{
 A function that can be used to generate Arcadia palettes with different palette options
