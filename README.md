@@ -69,11 +69,23 @@ ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
 
 ![](man/figures/README-scale_index-1.png)<!-- -->
 
-You can view all the color palette options and the individual hex codes
-composing each palette with `show_arcadia_palettes`:
+You can also apply gradient palettes to your plots with
+`gradient_fill_arcadia` or `gradient_scale_arcadia` in a similar fashion
+to the above:
 
 ``` r
-show_arcadia_palettes()
+ggplot(data = mtcars, aes(x = hp, y = mpg, color = hp)) +
+ geom_point(size=2.5) + 
+ theme_arcadia() + 
+ gradient_color_arcadia("lisafrank")
+```
+
+![](man/figures/README-gradient_example-1.png)<!-- --> You can view all
+the color palette options and the individual hex codes composing each
+palette within the main and gradient palettes with:
+
+``` r
+show_arcadia_main_palettes()
 #> $primary
 #>  [1] "#5088C5" "#F28360" "#3B9886" "#F7B846" "#7A77AB" "#F898AE" "#73B5E3"
 #>  [8] "#FFB984" "#F5E4BE" "#BABEE0" "#97CD78" "#C85152"
@@ -109,7 +121,55 @@ show_arcadia_palettes()
 #> 
 #> $cool_grays
 #> [1] "#E6EAED" "#CAD4DB" "#ABBAC4" "#8A99AD" "#687787"
+show_arcadia_gradient_palettes()
+#> $magma
+#> [1] "#341E60" "#54448C" "#A96789" "#E9A482" "#F5DFB2"
+#> 
+#> $verde
+#> [1] "#09473E" "#4E7F72" "#FFCC7B" "#FFE3D4"
+#> 
+#> $viridis
+#> [1] "#282A49" "#5088C5" "#97CD78" "#FFFDBD"
+#> 
+#> $wine
+#> [1] "#52180A" "#C85152" "#FFB984" "#FFE3D4"
+#> 
+#> $lisafrank
+#> [1] "#09473E" "#5088C5" "#BABEE0" "#F4CAE3"
+#> 
+#> $sunset
+#> [1] "#4D2500" "#A85E28" "#E9A482" "#FFCC7B" "#F5DFB2"
+#> 
+#> $oranges
+#> [1] "#964222" "#FFB984" "#F8F4F1"
+#> 
+#> $sages
+#> [1] "#2A6B5E" "#B5BEA4" "#F7FBEF"
+#> 
+#> $orangesage
+#> [1] "#964222" "#FFB984" "#F8F4F1" "#2A6B5E" "#B5BEA4" "#F7FBEF"
+#> 
+#> $reds
+#> [1] "#9E3F41" "#C85152" "#FFF3F4"
+#> 
+#> $blues
+#> [1] "#2B65A1" "#5088C5" "#F4FBFF"
+#> 
+#> $redblue
+#> [1] "#9E3F41" "#C85152" "#FFF3F4" "#2B65A1" "#5088C5" "#F4FBFF"
+#> 
+#> $purples
+#> [1] "#6862AB" "#7A77AB" "#FCF7FF"
+#> 
+#> $greens
+#> [1] "#47784A" "#97CD78" "#F7FBEF"
+#> 
+#> $purplegreen
+#> [1] "#6862AB" "#7A77AB" "#FCF7FF" "#47784A" "#97CD78" "#F7FBEF"
 ```
+
+Note that there are overlapping names for the main and gradient palettes
+such as `blues` but the individual colors within these palettes differ.
 
 ## Development
 

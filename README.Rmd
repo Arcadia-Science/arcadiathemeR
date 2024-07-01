@@ -63,10 +63,22 @@ ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
   scale_x_continuous(expand=c(0,0)) # remove whitespace between both axes and the plot
 ```
 
-You can view all the color palette options and the individual hex codes composing each palette with `show_arcadia_palettes`: 
-```{r}
-show_arcadia_palettes()
+
+You can also apply gradient palettes to your plots with `gradient_fill_arcadia` or `gradient_scale_arcadia` in a similar fashion to the above: 
+```{r, gradient_example}
+ggplot(data = mtcars, aes(x = hp, y = mpg, color = hp)) +
+ geom_point(size=2.5) + 
+ theme_arcadia() + 
+ gradient_color_arcadia("lisafrank")
+
 ```
+You can view all the color palette options and the individual hex codes composing each palette within the main and gradient palettes with:
+```{r}
+show_arcadia_main_palettes()
+show_arcadia_gradient_palettes()
+```
+Note that there are overlapping names for the main and gradient palettes such as `blues` but the individual colors within these palettes differ. 
+
 
 ## Development
 To install the package locally while in development, follow the instructions [here](https://stackoverflow.com/questions/21171142/how-to-install-r-package-from-private-repo-using-devtools-install-github). Briefly: 

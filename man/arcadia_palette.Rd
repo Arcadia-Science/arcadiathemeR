@@ -2,12 +2,12 @@
 % Please edit documentation in R/arcadia_palette.R
 \name{arcadia_palette}
 \alias{arcadia_palette}
-\title{Arcadia color palette functions}
+\title{Arcadia main color palette function}
 \usage{
 arcadia_palette(palette_name, start = 1, end = NULL, reverse = FALSE)
 }
 \arguments{
-\item{palette_name}{A character string specifying the name of the palette to retrieve.}
+\item{palette_name}{A character string specifying the name of the main color palette to retrieve.}
 
 \item{start}{Starting position of color palette if want to use different subsets of the color palette}
 
@@ -16,7 +16,7 @@ arcadia_palette(palette_name, start = 1, end = NULL, reverse = FALSE)
 \item{reverse}{Boolean indicating whether to reverse the palette colors}
 }
 \value{
-A function that can be used to generate Arcadia palettes with different palette options
+A function that can be used to generate the main Arcadia color palettes with different palette options.
 }
 \description{
 Possible values are "primary", "secondary", "neutrals", "blues", "oranges", "yellows", "purples", "greens", "pinks", "warm_grays", and "cool_grays"

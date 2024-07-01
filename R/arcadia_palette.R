@@ -1,13 +1,13 @@
-#' Arcadia color palette functions
+#' Arcadia main color palette function
 #'
-#' @param palette_name A character string specifying the name of the palette to retrieve.
+#' @param palette_name A character string specifying the name of the main color palette to retrieve.
 #' @param start Starting position of color palette if want to use different subsets of the color palette
 #' @param end Ending position of color palette if want to use different subsets of the color palette
 #' @param reverse Boolean indicating whether to reverse the palette colors
 #'
 #' @description Possible values are "primary", "secondary", "neutrals", "blues", "oranges", "yellows", "purples", "greens", "pinks", "warm_grays", and "cool_grays"
 #'
-#' @return A function that can be used to generate Arcadia palettes with different palette options
+#' @return A function that can be used to generate the main Arcadia color palettes with different palette options.
 #' @export
 #' @examples
 #' arcadia_palette("primary")
@@ -48,14 +48,16 @@ arcadia_palette <- function(palette_name, start = 1, end = NULL, reverse = FALSE
   values[start:end]
 }
 
-#' Show palette options
+#' Show main palette options
+#'
+#' @description Shows the main color palette vectors with hex codes
 #'
 #' @return Palette vectors with hex codes
 #' @export
 #'
 #' @examples
-#' show_arcadia_palettes()
-show_arcadia_palettes <- function() {
+#' show_arcadia_main_palettes()
+show_arcadia_main_palettes <- function() {
   palettes <- list(
     primary = primary,
     secondary = secondary,
@@ -72,6 +74,80 @@ show_arcadia_palettes <- function() {
 
   return(palettes)
 
+}
+
+#' Arcadia gradient color palettes function
+#'
+#'
+#' @param gradient_name A character string specifying the name of the gradient palette to retrieve.
+#' @param reverse
+#'
+#' #' @description Possible values are "magma", "verde", "viridis", "wine", "lisafrank", "sunset", "oranges", "sages", "orangesage", "reds", "blues", "redblue", "purples", "greens", and "purplegreen".
+#'
+#' @return A function that can be used to generate the Arcadia gradient palettes with different palette options.
+#' @export
+#'
+#' @examples
+#' arcadia_gradient_palette("wine")
+#' arcadia_gradient_palette("wine", reverse = TRUE)
+arcadia_gradient_palette <- function(gradient_name, reverse = FALSE) {
+  gradients <- list(
+    magma = magma,
+    verde = verde,
+    viridis = viridis,
+    wine = wine,
+    lisafrank = lisafrank,
+    sunset = sunset,
+    oranges = oranges_gradient,
+    sages = sages_gradient,
+    orangesage = orange_sage_gradient,
+    reds = reds_gradient,
+    blues = blues_gradient,
+    redblue = red_blue_gradient,
+    purples = purples_gradient,
+    greens = greens_gradient,
+    purplegreen = purples_greens_gradient
+  )
+
+  if (!gradient_name %in% names(gradients)) {
+    stop("Invalid palette name. Choose from 'magma', 'verde', 'viridis', 'wine', 'lisafrank', 'sunset', 'oranges', 'sages', 'orangesage', 'reds', 'blues', 'redblue', 'purples', 'greens', or 'purplegreen'. ")
+  }
+
+  pal <- gradients[[gradient_name]]
+
+  if (reverse) {
+    pal <- rev(pal)
+  }
+  return(colorRampPalette(pal))
+}
+
+#' Show gradient color palettes as a vector of hex codes
+#'
+#' @return Gradient palette vectors with hex codes
+#' @export
+#'
+#' @examples
+#' show_arcadia_gradient_palettes()
+show_arcadia_gradient_palettes <- function() {
+  gradients <- list(
+    magma = magma,
+    verde = verde,
+    viridis = viridis,
+    wine = wine,
+    lisafrank = lisafrank,
+    sunset = sunset,
+    oranges = oranges_gradient,
+    sages = sages_gradient,
+    orangesage = orange_sage_gradient,
+    reds = reds_gradient,
+    blues = blues_gradient,
+    redblue = red_blue_gradient,
+    purples = purples_gradient,
+    greens = greens_gradient,
+    purplegreen = purples_greens_gradient
+  )
+
+  return(gradients)
 }
 
 # all colors
@@ -131,7 +207,24 @@ ice <- c("#E6EAED")
 dove <- c("#CAD4DB")
 cloud <- c("#ABBAC4")
 steel <- c("#687787")
+heather <- c("#A96789")
+tumbleweed <- c("#E9A482")
+wheat <- c("#F5DFB2")
+shire <- c("#4E7F72")
+topaz <- c("#FFCC7B")
+space <- c("#282A49")
+lime <- c("#97CD78")
+butter <- c("#FFFDBD")
+redwood <- c("#52180A")
+blossom <- c("#F4CAE3")
+soil <- c("#4D2500")
+terracotta <- c("#964222")
+blush <- c("#FFF3F4")
+lilac <- c("#6862AB")
+ghost <- c("#FCF7FF")
+fern <- c("#47784A")
 
+# main color palettes
 primary <- c(aegean, amber, seaweed, canary, aster, rose, vital, tangerine, oat, wish, lime, dragon)
 
 secondary <- c(sky, dress, taupe, denim, sage, mars, marine, shell)
@@ -153,3 +246,35 @@ pinks <- c(putty, dress, rose, candy, azalea)
 warm_grays <- c(stone, taupe, chateau, bark, mud)
 
 cool_grays <- c(ice, dove, cloud, marine, steel)
+
+# gradient palettes
+magma <- c(concord, tanzanite, heather, tumbleweed, wheat)
+
+verde <- c(depths, shire, topaz, putty)
+
+viridis <- c(space, aegean, lime, butter)
+
+wine <- c(redwood, dragon, tangerine, putty)
+
+lisafrank <- c(depths, aegean, wish, blossom)
+
+sunset <- c(soil, umber, tumbleweed, topaz, wheat)
+
+oranges_gradient <- c(terracotta, tangerine, dawn)
+
+sages_gradient <- c(asparagus, sage, lichen)
+
+orange_sage_gradient <- c(terracotta, tangerine, dawn, asparagus, sage, lichen)
+
+reds_gradient <- c(cinnabar, dragon, blush)
+
+blues_gradient <- c(lapis, aegean, zephyr)
+
+red_blue_gradient <- c(cinnabar, dragon, blush, lapis, aegean, zephyr)
+
+purples_gradient <- c(lilac, aster, ghost)
+
+greens_gradient <- c(fern, lime, lichen)
+
+purples_greens_gradient <- c(lilac, aster, ghost, fern, lime, lichen)
+
