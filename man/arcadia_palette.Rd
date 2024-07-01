@@ -2,7 +2,7 @@
 % Please edit documentation in R/arcadia_palette.R
 \name{arcadia_palette}
 \alias{arcadia_palette}
-\title{Arcadia color palettes}
+\title{Arcadia color palette functions}
 \usage{
 arcadia_palette(palette_name, start = 1, end = NULL, reverse = FALSE)
 }
@@ -19,9 +19,9 @@ arcadia_palette(palette_name, start = 1, end = NULL, reverse = FALSE)
 A function that can be used to generate Arcadia palettes with different palette options
 }
 \description{
-Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
+Possible values are "primary", "secondary", "neutrals", "blues", "oranges", "yellows", "purples", "greens", "pinks", "warm_grays", and "cool_grays"
 }
 \examples{
-arcadia_palette("accent")
-arcadia_palette("accent", start=4, end=6)
+arcadia_palette("primary")
+arcadia_palette("primary", start=4, end=6)
 }

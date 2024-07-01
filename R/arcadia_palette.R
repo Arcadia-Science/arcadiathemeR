@@ -1,27 +1,34 @@
-#' Arcadia color palettes
+#' Arcadia color palette functions
 #'
 #' @param palette_name A character string specifying the name of the palette to retrieve.
 #' @param start Starting position of color palette if want to use different subsets of the color palette
 #' @param end Ending position of color palette if want to use different subsets of the color palette
 #' @param reverse Boolean indicating whether to reverse the palette colors
 #'
-#' @description Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"
+#' @description Possible values are "primary", "secondary", "neutrals", "blues", "oranges", "yellows", "purples", "greens", "pinks", "warm_grays", and "cool_grays"
 #'
 #' @return A function that can be used to generate Arcadia palettes with different palette options
 #' @export
 #' @examples
-#' arcadia_palette("accent")
-#' arcadia_palette("accent", start=4, end=6)
+#' arcadia_palette("primary")
+#' arcadia_palette("primary", start=4, end=6)
 arcadia_palette <- function(palette_name, start = 1, end = NULL, reverse = FALSE) {
   palettes <- list(
-    accent = accent,
-    accent_expanded = accent_expanded,
-    accent_ordered = accent_ordered,
-    light_ordered = light_ordered
+    primary = primary,
+    secondary = secondary,
+    neutrals = neutrals,
+    blues = blues,
+    oranges = oranges,
+    yellows = yellows,
+    purples = purples,
+    greens = greens,
+    pinks = pinks,
+    warm_grays = warm_grays,
+    cool_grays = cool_grays
   )
 
   if (!palette_name %in% names(palettes)) {
-    stop("Invalid palette name. Choose from 'accent', 'accent_expanded', 'accent_ordered', and 'light_ordered'.")
+    stop("Invalid palette name. Choose from 'primary', 'secondary', 'neutrals', 'blues', 'oranges', 'yellows', 'purples', 'greens', 'pinks', 'warm_grays', or 'cool_grays'.")
   }
 
   values <- unname(palettes[[palette_name]])
@@ -41,11 +48,108 @@ arcadia_palette <- function(palette_name, start = 1, end = NULL, reverse = FALSE
   values[start:end]
 }
 
-# Define the color palettes
-accent <- c('aegean' = '#5088C5', 'amber' = '#F28360', 'seaweed' = '#3B9886', 'canary' = '#F7B846', 'aster' = '#7A77AB', 'rose' = '#F898AE', 'blue sky' = '#C6E7F4', 'dress' = '#F8C5C1', 'sage' = '#B5BEA4', 'oat' = '#F5E4BE', 'periwinkle' = '#DCBFFC', 'blossom' = '#F5CBE4')
+#' Show palette options
+#'
+#' @return Palette vectors with hex codes
+#' @export
+#'
+#' @examples
+#' show_arcadia_palettes()
+show_arcadia_palettes <- function() {
+  palettes <- list(
+    primary = primary,
+    secondary = secondary,
+    neutrals = neutrals,
+    blues = blues,
+    oranges = oranges,
+    yellows = yellows,
+    purples = purples,
+    greens = greens,
+    pinks = pinks,
+    warm_grays = warm_grays,
+    cool_grays = cool_grays
+  )
 
-accent_expanded <- c('lime' = '#97CD78', 'vital blue' = '#73B5E3', 'tangerine' = '#FFB984', 'chateau' = '#BAB0A8', 'dragon'= '#C85152', 'marine blue' = '#8A99AD','mint' = '#D1EADF', 'wish' = '#BABEE0', 'satin' = '#F1E8DA', 'taupe' =  '#DAD3C7', 'mars' = '#DA9085', 'denim' = '#B6C8D4')
+  return(palettes)
 
-accent_ordered <- c('aegean' = '#5088C5', 'amber' = '#F28360', 'canary' = '#F7B846', 'lime' = '#97CD78', 'aster' = '#7A77AB', 'rose' = '#F898AE', 'seaweed' = '#3B9886', 'dragon' = '#C85152', 'vital blue' = '#73B5E3', 'chateau' = '#BAB0A8', 'marine blue' = '#8A99AD', 'tangerine' = '#FFB984')
+}
 
-light_ordered <- c('blue sky' =  '#C6E7F4', 'dress' = '#F8C5C1', 'oat' = '#F5E4BE', 'sage' = '#B5BEA4', 'periwinkle' = '#DCBFFC', 'denim' = '#B6C8D4', 'taupe' = '#DAD3C7', 'mars' = '#DA9085', 'blossom' = '#F5CBE4', 'mint' = '#D1EADF', 'wish' = '#BABEE0', 'satin' = '#F1E8DA')
+# all colors
+aegean <- c("#5088C5")
+amber <- c("#F28360")
+seaweed <- c("#3B9886")
+canary <-	c("#F7B846")
+aster <- c("#7A77AB")
+rose <- c("#F898AE")
+vital <- c("#73B5E3")
+tangerine <- c("#FFB984")
+oat <- c("#F5E4BE")
+wish <- c("#BABEE0")
+lime <- c("#97CD78")
+dragon <- c("#C85152")
+sky <- c("#C6E7F4")
+dress <- c("#F8C5C1")
+taupe <- c("#DBD1C3")
+denim	<- c("#B6C8D4")
+sage <- c("#B5BEA4")
+mars <- c("#DA9085")
+marine <- c("#8A99AD")
+shell <- c("#EDE0D6")
+white <- c("#FFFFFF")
+gray <- c("#EBEDE8")
+chateau <- c("#BAB0A8")
+bark <- c("#8F8885")
+slate	<- c("#43413F")
+charcoal <- c("#484B50")
+crow <- c("#292928")
+black <- c("#09090A")
+forest <- c("#596F74")
+parchment <- c("#FEF7F1")
+zephyr <- c("#F4FBFF")
+lichen <- c("#F7FBEF")
+dawn <- c("#F8F4F1")
+lapis <- c("#2B65A1")
+dusk <- c("#094468")
+melon <- c("#FFCFAF")
+cinnabar <- c("#9E3F41")
+sun <- c("#FFD364")
+mustard <- c("#D68D22")
+umber <- c("#A85E28")
+iris <- c("#DCDFEF")
+tanzanite <- c("#54448C")
+concord <- c("#341E60")
+glass <- c("#C3E2DB")
+teal <- c("#6FBCAD")
+asparagus <- c("#2A6B5E")
+depths <- c("#09473E")
+putty <- c("#FFE3D4")
+candy <- c("#E2718F")
+azalea <- c("#C04C70")
+stone <- c("#EDE6DA")
+mud <- c("#635C5A")
+ice <- c("#E6EAED")
+dove <- c("#CAD4DB")
+cloud <- c("#ABBAC4")
+steel <- c("#687787")
+
+primary <- c(aegean, amber, seaweed, canary, aster, rose, vital, tangerine, oat, wish, lime, dragon)
+
+secondary <- c(sky, dress, taupe, denim, sage, mars, marine, shell)
+
+neutrals <- c(white, gray, chateau, bark, slate, charcoal, crow, black, forest)
+
+blues <- c(sky, vital, aegean, lapis, dusk)
+
+oranges <- c(melon, tangerine, amber, dragon, cinnabar)
+
+yellows <- c(oat, sun, canary, mustard, umber)
+
+purples <- c(iris, wish, aster, tanzanite, concord)
+
+greens <- c(glass, teal, seaweed, asparagus, depths)
+
+pinks <- c(putty, dress, rose, candy, azalea)
+
+warm_grays <- c(stone, taupe, chateau, bark, mud)
+
+cool_grays <- c(ice, dove, cloud, marine, steel)

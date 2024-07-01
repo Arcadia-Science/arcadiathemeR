@@ -6,7 +6,7 @@
 \title{Arcadia color scales}
 \usage{
 scale_color_arcadia(
-  palette_name = "accent",
+  palette_name = "primary",
   start = 1,
   end = NULL,
   reverse = FALSE,
@@ -14,7 +14,7 @@ scale_color_arcadia(
 )
 
 scale_fill_arcadia(
-  palette_name = "accent",
+  palette_name = "primary",
   start = 1,
   end = NULL,
   reverse = FALSE,
@@ -22,7 +22,7 @@ scale_fill_arcadia(
 )
 }
 \arguments{
-\item{palette_name}{The name of the palette to use. Possible values are "accent", "accent_expanded", "accent_ordered", and "light_ordered"}
+\item{palette_name}{The name of the palette to use. Possible values are "primary", "secondary", "neutrals", "blues", "oranges", "yellows", "purples", "greens", "pinks", "warm_grays", and "cool_grays".}
 
 \item{start}{Start index to subset the palette}
 
@@ -87,28 +87,28 @@ Color scales using the colors from the Arcadia palettes.
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   geom_point(size=2.5) +
   theme_arcadia() +
-  scale_color_arcadia("accent")
+  scale_color_arcadia("primary")
 }
 
 \dontrun{
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
  geom_point(size=2.5) +
  theme_arcadia() +
- scale_color_arcadia("accent", start=2, end=5)
+ scale_color_arcadia("primary", start=2, end=5)
 }
 
 \dontrun{
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
 geom_density(alpha = 0.8) +
 theme_arcadia() +
-scale_fill_arcadia("accent")
+scale_fill_arcadia("primary")
 }
 
 \dontrun{
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
  geom_density(alpha = 0.8) +
  theme_arcadia() +
- scale_fill_arcadia("accent", start=2, end=5)
+ scale_fill_arcadia("primary", start=2, end=5)
 }
 }
 \concept{color arcadia}
