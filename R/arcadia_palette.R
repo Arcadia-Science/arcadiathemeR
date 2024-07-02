@@ -154,7 +154,7 @@ show_arcadia_gradient_palettes <- function() {
 aegean <- c("#5088C5")
 amber <- c("#F28360")
 seaweed <- c("#3B9886")
-canary <-	c("#F7B846")
+canary <- c("#F7B846")
 aster <- c("#7A77AB")
 rose <- c("#F898AE")
 vital <- c("#73B5E3")
