@@ -264,7 +264,7 @@ oranges_gradient <- c(terracotta, tangerine, dawn)
 
 sages_gradient <- c(asparagus, sage, lichen)
 
-orange_sage_gradient <- c(terracotta, tangerine, dawn, asparagus, sage, lichen)
+orange_sage_gradient <- c(terracotta, tangerine, dawn, lichen, sage, asparagus)
 
 reds_gradient <- c(cinnabar, dragon, blush)
 
