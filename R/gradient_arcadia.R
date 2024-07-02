@@ -48,6 +48,3 @@ gradient_fill_arcadia <- function(palette_name = "magma", reverse = FALSE, ...) 
   pal <- arcadia_gradient_palette(palette_name, reverse)
   ggplot2::scale_fill_gradientn(colors = pal(256), ...)
 }
-
-
-

@@ -1,6 +1,6 @@
 #' Arcadia main color palette function
 #'
-#' @param palette_name A character string specifying the name of the main color palette to retrieve. Possible values are elements in PALETTES
+#' @param palette_name A character string specifying the name of the main color palette to retrieve. Possible values are elements in PALETTES.
 #' @param start Starting position of color palette if want to use different subsets of the color palette
 #' @param end Ending position of color palette if want to use different subsets of the color palette
 #' @param reverse Boolean indicating whether to reverse the palette colors
@@ -37,24 +37,24 @@ arcadia_palette <- function(palette_name, start = 1, end = NULL, reverse = FALSE
 
 #' Show main palette options
 #'
-#' @description Shows the main color palette vectors with hex codes
+#' @description Shows the main color palette vectors with hex codes.
 #'
-#' @return Palette vectors with hex codes
+#' @return Palette vectors with hex codes.
 #' @export
 #'
 #' @examples
-#' show_arcadia_main_palettes()
-show_arcadia_main_palettes <- function() {
+#' show_arcadia_palettes()
+show_arcadia_palettes <- function() {
   return(PALETTES)
 }
 
 #' Arcadia gradient color palettes function
 #'
 #'
-#' @param gradient_name A character string specifying the name of the gradient palette to retrieve. Possible values are elements in GRADIENTS
+#' @param gradient_name A character string specifying the name of the gradient palette to retrieve. Possible values are elements in GRADIENTS.
 #' @param reverse
 #'
-#' #' @description
+#' #' @description Function to return and check gradients when used in the scale_gradient* functions applied to a plot.
 #'
 #' @return A function that can be used to generate the Arcadia gradient palettes with different palette options.
 #' @export
@@ -68,12 +68,12 @@ arcadia_gradient_palette <- function(gradient_name, reverse = FALSE) {
     stop("Invalid gradient name. Choose from: ", paste(GRADIENT_NAMES, collapse = ", "))
   }
 
-  pal <- GRADIENTS[[gradient_name]]
+  palette <- GRADIENTS[[gradient_name]]
 
   if (reverse) {
-    pal <- rev(pal)
+    palette <- rev(palette)
   }
-  return(colorRampPalette(pal))
+  return(colorRampPalette(palette))
 }
 
 #' Show gradient color palettes as a vector of hex codes
@@ -82,8 +82,8 @@ arcadia_gradient_palette <- function(gradient_name, reverse = FALSE) {
 #' @export
 #'
 #' @examples
-#' show_arcadia_gradient_palettes()
-show_arcadia_gradient_palettes <- function() {
+#' show_arcadia_gradients()
+show_arcadia_gradients <- function() {
   return(GRADIENTS)
 }
 

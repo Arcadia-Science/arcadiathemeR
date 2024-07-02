@@ -62,7 +62,7 @@ the `scale` function:
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
   geom_density(alpha = 0.8, color = NA) + # remove border line from filled-in density plots
   theme_arcadia() +
-  scale_fill_arcadia("blues", start=2, end=5) +
+  scale_fill_arcadia("blue_shades", start=2, end=5) +
   scale_y_continuous(expand=c(0,0)) +
   scale_x_continuous(expand=c(0,0)) # remove whitespace between both axes and the plot
 ```
@@ -85,7 +85,7 @@ the color palette options and the individual hex codes composing each
 palette within the main and gradient palettes with:
 
 ``` r
-show_arcadia_main_palettes()
+show_arcadia_palettes()
 #> $primary
 #>  [1] "#5088C5" "#F28360" "#3B9886" "#F7B846" "#7A77AB" "#F898AE" "#73B5E3"
 #>  [8] "#FFB984" "#F5E4BE" "#BABEE0" "#97CD78" "#C85152"
@@ -94,34 +94,42 @@ show_arcadia_main_palettes()
 #> [1] "#C6E7F4" "#F8C5C1" "#DBD1C3" "#B6C8D4" "#B5BEA4" "#DA9085" "#8A99AD"
 #> [8] "#EDE0D6"
 #> 
+#> $primary_ordered
+#>  [1] "#5088C5" "#F28360" "#F7B846" "#97CD78" "#7A77AB" "#F898AE" "#3B9886"
+#>  [8] "#C85152" "#73B5E3" "#FFB984" "#F5E4BE" "#BABEE0"
+#> 
+#> $secondary_ordered
+#> [1] "#C6E7F4" "#F8C5C1" "#DBD1C3" "#B5BEA4" "#B6C8D4" "#DA9085" "#EDE0D6"
+#> [8] "#8A99AD"
+#> 
 #> $neutrals
 #> [1] "#FFFFFF" "#EBEDE8" "#BAB0A8" "#8F8885" "#43413F" "#484B50" "#292928"
 #> [8] "#09090A" "#596F74"
 #> 
-#> $blues
+#> $blue_shades
 #> [1] "#C6E7F4" "#73B5E3" "#5088C5" "#2B65A1" "#094468"
 #> 
-#> $oranges
+#> $orange_shades
 #> [1] "#FFCFAF" "#FFB984" "#F28360" "#C85152" "#9E3F41"
 #> 
-#> $yellows
+#> $yellow_shades
 #> [1] "#F5E4BE" "#FFD364" "#F7B846" "#D68D22" "#A85E28"
 #> 
-#> $purples
+#> $purple_shades
 #> [1] "#DCDFEF" "#BABEE0" "#7A77AB" "#54448C" "#341E60"
 #> 
-#> $greens
+#> $green_shades
 #> [1] "#C3E2DB" "#6FBCAD" "#3B9886" "#2A6B5E" "#09473E"
 #> 
-#> $pinks
+#> $pink_shades
 #> [1] "#FFE3D4" "#F8C5C1" "#F898AE" "#E2718F" "#C04C70"
 #> 
-#> $warm_grays
+#> $warm_gray_shades
 #> [1] "#EDE6DA" "#DBD1C3" "#BAB0A8" "#8F8885" "#635C5A"
 #> 
-#> $cool_grays
+#> $cool_gray_shades
 #> [1] "#E6EAED" "#CAD4DB" "#ABBAC4" "#8A99AD" "#687787"
-show_arcadia_gradient_palettes()
+show_arcadia_gradients()
 #> $magma
 #> [1] "#341E60" "#54448C" "#A96789" "#E9A482" "#F5DFB2"
 #> 
@@ -147,7 +155,7 @@ show_arcadia_gradient_palettes()
 #> [1] "#2A6B5E" "#B5BEA4" "#F7FBEF"
 #> 
 #> $orangesage
-#> [1] "#964222" "#FFB984" "#F8F4F1" "#2A6B5E" "#B5BEA4" "#F7FBEF"
+#> [1] "#964222" "#FFB984" "#F8F4F1" "#F7FBEF" "#B5BEA4" "#2A6B5E"
 #> 
 #> $reds
 #> [1] "#9E3F41" "#C85152" "#FFF3F4"
@@ -156,7 +164,7 @@ show_arcadia_gradient_palettes()
 #> [1] "#2B65A1" "#5088C5" "#F4FBFF"
 #> 
 #> $redblue
-#> [1] "#9E3F41" "#C85152" "#FFF3F4" "#2B65A1" "#5088C5" "#F4FBFF"
+#> [1] "#9E3F41" "#C85152" "#FFF3F4" "#F4FBFF" "#5088C5" "#2B65A1"
 #> 
 #> $purples
 #> [1] "#6862AB" "#7A77AB" "#FCF7FF"
@@ -165,11 +173,8 @@ show_arcadia_gradient_palettes()
 #> [1] "#47784A" "#97CD78" "#F7FBEF"
 #> 
 #> $purplegreen
-#> [1] "#6862AB" "#7A77AB" "#FCF7FF" "#47784A" "#97CD78" "#F7FBEF"
+#> [1] "#6862AB" "#7A77AB" "#FCF7FF" "#F7FBEF" "#97CD78" "#47784A"
 ```
-
-Note that there are overlapping names for the main and gradient palettes
-such as `blues` but the individual colors within these palettes differ.
 
 ## Development
 

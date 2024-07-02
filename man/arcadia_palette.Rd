@@ -7,7 +7,7 @@
 arcadia_palette(palette_name, start = 1, end = NULL, reverse = FALSE)
 }
 \arguments{
-\item{palette_name}{A character string specifying the name of the main color palette to retrieve. Possible values are elements in PALETTES}
+\item{palette_name}{A character string specifying the name of the main color palette to retrieve. Possible values are elements in PALETTES.}
 
 \item{start}{Starting position of color palette if want to use different subsets of the color palette}
 

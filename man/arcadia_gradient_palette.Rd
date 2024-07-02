@@ -7,9 +7,9 @@
 arcadia_gradient_palette(gradient_name, reverse = FALSE)
 }
 \arguments{
-\item{gradient_name}{A character string specifying the name of the gradient palette to retrieve. Possible values are elements in GRADIENTS}
+\item{gradient_name}{A character string specifying the name of the gradient palette to retrieve. Possible values are elements in GRADIENTS.}
 
-\item{reverse}{#' @description}
+\item{reverse}{#' @description Function to return and check gradients when used in the scale_gradient* functions applied to a plot.}
 }
 \value{
 A function that can be used to generate the Arcadia gradient palettes with different palette options.
