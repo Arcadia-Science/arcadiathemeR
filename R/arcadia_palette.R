@@ -276,5 +276,5 @@ purples_gradient <- c(lilac, aster, ghost)
 
 greens_gradient <- c(fern, lime, lichen)
 
-purples_greens_gradient <- c(lilac, aster, ghost, fern, lime, lichen)
+purples_greens_gradient <- c(lilac, aster, ghost, lichen, lime, fern)
 
