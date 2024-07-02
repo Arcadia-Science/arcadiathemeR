@@ -110,7 +110,7 @@ arcadia_gradient_palette <- function(gradient_name, reverse = FALSE) {
   )
 
   if (!gradient_name %in% names(gradients)) {
-    stop("Invalid palette name. Choose from 'magma', 'verde', 'viridis', 'wine', 'lisafrank', 'sunset', 'oranges', 'sages', 'orangesage', 'reds', 'blues', 'redblue', 'purples', 'greens', or 'purplegreen'. ")
+    stop("Invalid gradient name. Choose from 'magma', 'verde', 'viridis', 'wine', 'lisafrank', 'sunset', 'oranges', 'sages', 'orangesage', 'reds', 'blues', 'redblue', 'purples', 'greens', or 'purplegreen'. ")
   }
 
   pal <- gradients[[gradient_name]]
