@@ -233,7 +233,7 @@ PALETTES <- list(
   orange_shades = ORANGESHADES,
   yellow_shades = YELLOWSHADES,
   purple_shades = PURPLESHADES,
-  green_shades = GREENSHADES,
+  teal_shades = TEALSHADES,
   pink_shades = PINKSHADES,
   warm_gray_shades = WARMGRAYSHADES,
   cool_gray_shades = COOLGRAYSHADES
