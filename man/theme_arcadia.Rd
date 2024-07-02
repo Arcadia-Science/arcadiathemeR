@@ -5,7 +5,7 @@
 \title{Arcadia theme adhering to illustration style guides}
 \usage{
 theme_arcadia(
-  base_size = 12,
+  base_size = 15,
   x_axis_type = "numerical",
   y_axis_type = "numerical"
 )
