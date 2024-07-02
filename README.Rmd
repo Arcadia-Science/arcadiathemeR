@@ -72,6 +72,27 @@ ggplot(data = mtcars, aes(x = hp, y = mpg, color = hp)) +
  gradient_color_arcadia("lisafrank")
 
 ```
+
+There are also bicolor gradients available that are useful for heatmap plots: 
+```{r, heatmap_example}
+library(reshape2)
+
+# heatmap of correlation matrix from iris dataset
+data(iris)
+iris_data <- iris[, 1:4]
+cor_matrix <- cor(iris_data)
+melted_cor_matrix <- (melt(cor_matrix))
+
+ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
+  geom_tile() +
+  theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical") +
+  gradient_fill_arcadia("purplegreen") + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.position = "top") +
+  labs(x = "", y = "")
+
+```
+
 You can view all the color palette options and the individual hex codes composing each palette within the main and gradient palettes with:
 ```{r}
 show_arcadia_palettes()

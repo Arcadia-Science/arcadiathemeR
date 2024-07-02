@@ -58,7 +58,7 @@ show_arcadia_palettes <- function() {
 #'
 #' @return A function that can be used to generate the Arcadia gradient palettes with different palette options.
 #' @export
-#' @importFrom grDevices colorRampPalette
+#' @importFrom grDevices colorRamp rgb
 #'
 #' @examples
 #' arcadia_gradient_palette("wine")
@@ -67,13 +67,21 @@ arcadia_gradient_palette <- function(gradient_name, reverse = FALSE) {
   if (!gradient_name %in% GRADIENT_NAMES) {
     stop("Invalid gradient name. Choose from: ", paste(GRADIENT_NAMES, collapse = ", "))
   }
-
-  palette <- GRADIENTS[[gradient_name]]
+  gradient <- GRADIENTS[[gradient_name]]
+  colors <- gradient$colors
+  positions <- gradient$positions
 
   if (reverse) {
-    palette <- rev(palette)
+    colors <- rev(colors)
+    positions <- rev(1 - positions)
   }
-  return(colorRampPalette(palette))
+
+  function(n) {
+    # Generate colors using the specified positions
+    color_positions <- scales::rescale(seq(0, 1, length.out = n), to = range(positions))
+    colors <- colorRamp(colors)(color_positions)
+    rgb(colors, maxColorValue = 255)
+  }
 }
 
 #' Show gradient color palettes as a vector of hex codes
@@ -188,36 +196,44 @@ WARMGRAYSHADES <- c(STONE, TAUPE, CHATEAU, BARK, MUD)
 
 COOLGRAYSHADES <- c(ICE, DOVE, CLOUD, MARINE, STEEL)
 
-# Gradients
-MAGMA <- c(CONCORD, TANZANITE, HEATHER, TUMBLEWEED, WHEAT)
+# Gradient palettes with positions
+MAGMA <- list(colors = c(CONCORD, TANZANITE, HEATHER, TUMBLEWEED, WHEAT), positions = c(0, 0.217, 0.498, 0.799, 1))
 
-VERDE <- c(DEPTHS, SHIRE, TOPAZ, PUTTY)
+VERDE <- list(colors = c(DEPTHS, SHIRE, TOPAZ, PUTTY), positions = c(0, 0.357, 0.909, 1))
 
-VIRIDIS <- c(SPACE, AEGEAN, LIME, BUTTER)
+VIRIDIS <- list(colors = c(SPACE, AEGEAN, LIME, BUTTER), positions = c(0, 0.468, 0.746, 1))
 
-WINE <- c(REDWOOD, DRAGON, TANGERINE, PUTTY)
+SUNSET <- list(colors = c(SOIL, UMBER, TUMBLEWEED, TOPAZ, PUTTY), positions = c(0.0, 0.407, 0.767, 0.915, 1.0))
 
-LISAFRANK <- c(DEPTHS, AEGEAN, WISH, BLOSSOM)
+WINE <- list(colors = c(REDWOOD, DRAGON, TANGERINE, DAWN), positions = c(0, 0.451, 0.828, 1))
 
-SUNSET <- c(SOIL, UMBER, TUMBLEWEED, TOPAZ, WHEAT)
+LISAFRANK <- list(colors = c(DEPTHS, AEGEAN, WISH, BLOSSOM), positions = c(0, 0.484, 0.862, 1))
 
-ORANGES <- c(TERRACOTTA, TANGERINE, DAWN)
+REDS <- list(colors = c(CINNABAR, DRAGON, BLUSH), positions = c(0.0, 0.212, 1.0))
 
-SAGES <- c(ASPARAGUS, SAGE, LICHEN)
+ORANGES <- list(colors = c(TERRACOTTA, TANGERINE, DAWN), positions = c(0.0, 0.761, 1.0))
 
-ORANGE_SAGE <- c(TERRACOTTA, TANGERINE, DAWN, LICHEN, SAGE, ASPARAGUS)
+GREENS <- list(colors = c(FERN, LIME, LICHEN), positions = c(0, 0.622, 1))
 
-REDS <- c(CINNABAR, DRAGON, BLUSH)
+SAGES <- list(colors = c(ASPARAGUS, SAGE, LICHEN), positions = c(0, 0.641, 1))
 
-BLUES <- c(LAPIS, AEGEAN, ZEPHYR)
+BLUES <- list(colors = c(LAPIS, AEGEAN, ZEPHYR), positions = c(0, 0.254, 1.0))
 
-RED_BLUE <- c(CINNABAR, DRAGON, BLUSH, ZEPHYR, AEGEAN, LAPIS)
+PURPLES <- list(colors = c(LILAC, ASTER, GHOST), positions = c(0, 0.144, 1.0))
 
-PURPLES <- c(LILAC, ASTER, GHOST)
+# Bicolor gradients
+# combine the gradients and inherit positions
+combine_gradients <- function(grad1, grad2) {
+  colors <- c(grad1$colors, rev(grad2$colors))
+  # Rescale the positions to fit the combined gradient
+  positions <- c(grad1$positions, rev(grad2$positions) + (1 - max(grad2$positions)))
+  list(colors = colors, positions = scales::rescale(positions))
+}
 
-GREENS <- c(FERN, LIME, LICHEN)
-
-PURPLES_GREENS <- c(LILAC, ASTER, GHOST, LICHEN, LIME, FERN)
+# composite gradients
+ORANGE_SAGE <- combine_gradients(ORANGES, SAGES)
+RED_BLUE <- combine_gradients(REDS, BLUES)
+PURPLE_GREEN <- combine_gradients(PURPLES, GREENS)
 
 # Palette lists and names
 
@@ -256,5 +272,5 @@ GRADIENTS <- list(
   redblue = RED_BLUE,
   purples = PURPLES,
   greens = GREENS,
-  purplegreen = PURPLES_GREENS
+  purplegreen = PURPLE_GREEN
 )
