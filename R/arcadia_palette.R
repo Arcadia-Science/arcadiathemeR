@@ -270,7 +270,7 @@ reds_gradient <- c(cinnabar, dragon, blush)
 
 blues_gradient <- c(lapis, aegean, zephyr)
 
-red_blue_gradient <- c(cinnabar, dragon, blush, lapis, aegean, zephyr)
+red_blue_gradient <- c(cinnabar, dragon, blush, zephyr, aegean, lapis)
 
 purples_gradient <- c(lilac, aster, ghost)
 
