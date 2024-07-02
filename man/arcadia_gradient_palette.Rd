@@ -7,9 +7,9 @@
 arcadia_gradient_palette(gradient_name, reverse = FALSE)
 }
 \arguments{
-\item{gradient_name}{A character string specifying the name of the gradient palette to retrieve.}
+\item{gradient_name}{A character string specifying the name of the gradient palette to retrieve. Possible values are elements in GRADIENTS}
 
-\item{reverse}{#' @description Possible values are "magma", "verde", "viridis", "wine", "lisafrank", "sunset", "oranges", "sages", "orangesage", "reds", "blues", "redblue", "purples", "greens", and "purplegreen".}
+\item{reverse}{#' @description}
 }
 \value{
 A function that can be used to generate the Arcadia gradient palettes with different palette options.

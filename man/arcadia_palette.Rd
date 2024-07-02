@@ -7,7 +7,7 @@
 arcadia_palette(palette_name, start = 1, end = NULL, reverse = FALSE)
 }
 \arguments{
-\item{palette_name}{A character string specifying the name of the main color palette to retrieve.}
+\item{palette_name}{A character string specifying the name of the main color palette to retrieve. Possible values are elements in PALETTES}
 
 \item{start}{Starting position of color palette if want to use different subsets of the color palette}
 
@@ -19,7 +19,7 @@ arcadia_palette(palette_name, start = 1, end = NULL, reverse = FALSE)
 A function that can be used to generate the main Arcadia color palettes with different palette options.
 }
 \description{
-Possible values are "primary", "secondary", "neutrals", "blues", "oranges", "yellows", "purples", "greens", "pinks", "warm_grays", and "cool_grays"
+Function to pass the main color palettes to scale functions
 }
 \examples{
 arcadia_palette("primary")

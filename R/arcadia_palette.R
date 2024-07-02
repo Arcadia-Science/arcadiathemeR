@@ -1,11 +1,11 @@
 #' Arcadia main color palette function
 #'
-#' @param palette_name A character string specifying the name of the main color palette to retrieve.
+#' @param palette_name A character string specifying the name of the main color palette to retrieve. Possible values are elements in PALETTES
 #' @param start Starting position of color palette if want to use different subsets of the color palette
 #' @param end Ending position of color palette if want to use different subsets of the color palette
 #' @param reverse Boolean indicating whether to reverse the palette colors
 #'
-#' @description Possible values are "primary", "secondary", "neutrals", "blues", "oranges", "yellows", "purples", "greens", "pinks", "warm_grays", and "cool_grays"
+#' @description Function to pass the main color palettes to scale functions
 #'
 #' @return A function that can be used to generate the main Arcadia color palettes with different palette options.
 #' @export
@@ -13,25 +13,12 @@
 #' arcadia_palette("primary")
 #' arcadia_palette("primary", start=4, end=6)
 arcadia_palette <- function(palette_name, start = 1, end = NULL, reverse = FALSE) {
-  palettes <- list(
-    primary = primary,
-    secondary = secondary,
-    neutrals = neutrals,
-    blues = blues,
-    oranges = oranges,
-    yellows = yellows,
-    purples = purples,
-    greens = greens,
-    pinks = pinks,
-    warm_grays = warm_grays,
-    cool_grays = cool_grays
-  )
 
-  if (!palette_name %in% names(palettes)) {
-    stop("Invalid palette name. Choose from 'primary', 'secondary', 'neutrals', 'blues', 'oranges', 'yellows', 'purples', 'greens', 'pinks', 'warm_grays', or 'cool_grays'.")
+  if (!palette_name %in% PALETTE_NAMES) {
+    stop("Invalid palette name. Choose from: ", paste(PALETTE_NAMES, collapse = ", "))
   }
 
-  values <- unname(palettes[[palette_name]])
+  values <- unname(PALETTES[[palette_name]])
 
   if (is.null(end)) {
     end <- length(values)
@@ -58,62 +45,30 @@ arcadia_palette <- function(palette_name, start = 1, end = NULL, reverse = FALSE
 #' @examples
 #' show_arcadia_main_palettes()
 show_arcadia_main_palettes <- function() {
-  palettes <- list(
-    primary = primary,
-    secondary = secondary,
-    neutrals = neutrals,
-    blues = blues,
-    oranges = oranges,
-    yellows = yellows,
-    purples = purples,
-    greens = greens,
-    pinks = pinks,
-    warm_grays = warm_grays,
-    cool_grays = cool_grays
-  )
-
-  return(palettes)
-
+  return(PALETTES)
 }
 
 #' Arcadia gradient color palettes function
 #'
 #'
-#' @param gradient_name A character string specifying the name of the gradient palette to retrieve.
+#' @param gradient_name A character string specifying the name of the gradient palette to retrieve. Possible values are elements in GRADIENTS
 #' @param reverse
 #'
-#' #' @description Possible values are "magma", "verde", "viridis", "wine", "lisafrank", "sunset", "oranges", "sages", "orangesage", "reds", "blues", "redblue", "purples", "greens", and "purplegreen".
+#' #' @description
 #'
 #' @return A function that can be used to generate the Arcadia gradient palettes with different palette options.
 #' @export
+#' @importFrom grDevices colorRampPalette
 #'
 #' @examples
 #' arcadia_gradient_palette("wine")
 #' arcadia_gradient_palette("wine", reverse = TRUE)
 arcadia_gradient_palette <- function(gradient_name, reverse = FALSE) {
-  gradients <- list(
-    magma = magma,
-    verde = verde,
-    viridis = viridis,
-    wine = wine,
-    lisafrank = lisafrank,
-    sunset = sunset,
-    oranges = oranges_gradient,
-    sages = sages_gradient,
-    orangesage = orange_sage_gradient,
-    reds = reds_gradient,
-    blues = blues_gradient,
-    redblue = red_blue_gradient,
-    purples = purples_gradient,
-    greens = greens_gradient,
-    purplegreen = purples_greens_gradient
-  )
-
-  if (!gradient_name %in% names(gradients)) {
-    stop("Invalid gradient name. Choose from 'magma', 'verde', 'viridis', 'wine', 'lisafrank', 'sunset', 'oranges', 'sages', 'orangesage', 'reds', 'blues', 'redblue', 'purples', 'greens', or 'purplegreen'. ")
+  if (!gradient_name %in% GRADIENT_NAMES) {
+    stop("Invalid gradient name. Choose from: ", paste(GRADIENT_NAMES, collapse = ", "))
   }
 
-  pal <- gradients[[gradient_name]]
+  pal <- GRADIENTS[[gradient_name]]
 
   if (reverse) {
     pal <- rev(pal)
@@ -129,25 +84,7 @@ arcadia_gradient_palette <- function(gradient_name, reverse = FALSE) {
 #' @examples
 #' show_arcadia_gradient_palettes()
 show_arcadia_gradient_palettes <- function() {
-  gradients <- list(
-    magma = magma,
-    verde = verde,
-    viridis = viridis,
-    wine = wine,
-    lisafrank = lisafrank,
-    sunset = sunset,
-    oranges = oranges_gradient,
-    sages = sages_gradient,
-    orangesage = orange_sage_gradient,
-    reds = reds_gradient,
-    blues = blues_gradient,
-    redblue = red_blue_gradient,
-    purples = purples_gradient,
-    greens = greens_gradient,
-    purplegreen = purples_greens_gradient
-  )
-
-  return(gradients)
+  return(GRADIENTS)
 }
 
 # all colors
@@ -224,10 +161,14 @@ LILAC <- c("#6862AB")
 GHOST <- c("#FCF7FF")
 FERN <- c("#47784A")
 
-# Main palettes
+# Palettes
 PRIMARY <- c(AEGEAN, AMBER, SEAWEED, CANARY, ASTER, ROSE, VITAL, TANGERINE, OAT, WISH, LIME, DRAGON)
 
+PRIMARY_ORDERED <- c(AEGEAN, AMBER, CANARY, LIME, ASTER, ROSE, SEAWEED, DRAGON, VITAL, TANGERINE, OAT, WISH)
+
 SECONDARY <- c(SKY, DRESS, TAUPE, DENIM, SAGE, MARS, MARINE, SHELL)
+
+SECONDARY_ORDERED <- c(SKY, DRESS, TAUPE, SAGE, DENIM, MARS, SHELL, MARINE)
 
 NEUTRALS <- c(WHITE, GRAY, CHATEAU, BARK, SLATE, CHARCOAL, CROW, BLACK, FOREST)
 
@@ -247,7 +188,7 @@ WARMGRAYSHADES <- c(STONE, TAUPE, CHATEAU, BARK, MUD)
 
 COOLGRAYSHADES <- c(ICE, DOVE, CLOUD, MARINE, STEEL)
 
-# Gradient Palettes
+# Gradients
 MAGMA <- c(CONCORD, TANZANITE, HEATHER, TUMBLEWEED, WHEAT)
 
 VERDE <- c(DEPTHS, SHIRE, TOPAZ, PUTTY)
@@ -277,3 +218,43 @@ PURPLES <- c(LILAC, ASTER, GHOST)
 GREENS <- c(FERN, LIME, LICHEN)
 
 PURPLES_GREENS <- c(LILAC, ASTER, GHOST, LICHEN, LIME, FERN)
+
+# Palette lists and names
+
+PALETTE_NAMES <- c("primary", "secondary", "primary_ordered", "secondary_ordered", "neutrals", "blue_shades", "orange_shades", "yellow_shades", "purple_shades", "green_shades", "pink_shades", "warm_gray_shades", "cool_gray_shades")
+
+PALETTES <- list(
+  primary = PRIMARY,
+  secondary = SECONDARY,
+  primary_ordered = PRIMARY_ORDERED,
+  secondary_ordered = SECONDARY_ORDERED,
+  neutrals = NEUTRALS,
+  blue_shades = BLUESHADES,
+  orange_shades = ORANGESHADES,
+  yellow_shades = YELLOWSHADES,
+  purple_shades = PURPLESHADES,
+  green_shades = GREENSHADES,
+  pink_shades = PINKSHADES,
+  warm_gray_shades = WARMGRAYSHADES,
+  cool_gray_shades = COOLGRAYSHADES
+)
+
+GRADIENT_NAMES <- c("magma", "verde", "viridis", "wine", "lisafrank", "sunset", "oranges", "sages", "orangesage", "reds", "blues", "redblue", "purples", "greens", "purplegreen")
+
+GRADIENTS <- list(
+  magma = MAGMA,
+  verde = VERDE,
+  viridis = VIRIDIS,
+  wine = WINE,
+  lisafrank = LISAFRANK,
+  sunset = SUNSET,
+  oranges = ORANGES,
+  sages = SAGES,
+  orangesage = ORANGE_SAGE,
+  reds = REDS,
+  blues = BLUES,
+  redblue = RED_BLUE,
+  purples = PURPLES,
+  greens = GREENS,
+  purplegreen = PURPLES_GREENS
+)
