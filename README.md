@@ -36,7 +36,7 @@ library(arcadiathemeR)
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   geom_point(size=2.5) +
   theme_arcadia(x_axis_type = "numerical") +
-  scale_color_arcadia("primary")
+  scale_color_arcadia(palette_name = "primary")
 ```
 
 ![](man/figures/README-base_use-1.png)<!-- -->
@@ -49,7 +49,7 @@ categorical data, you can specify if the axis is categorical with:
 ggplot(data=diamonds, aes(x=cut, fill=cut)) +
   geom_bar() +
   theme_arcadia(x_axis_type = "categorical") +
-  scale_fill_arcadia("secondary", reverse = TRUE) +
+  scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
   scale_y_continuous(expand=c(0,0)) + # removes whitespace between axis and bars
   theme(legend.position = "bottom")
 ```
@@ -61,9 +61,9 @@ the `scale` function:
 
 ``` r
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
-  geom_density(alpha = 0.8, color = NA) + # remove border line from filled-in density plots
+  geom_density(alpha = 0.8, linewidth = 0) + # remove border line from filled-in density plots
   theme_arcadia() +
-  scale_fill_arcadia("blue_shades", start=2, end=5) +
+  scale_fill_arcadia(palette_name = "blue_shades", start=2, end=5) +
   scale_y_continuous(expand=c(0,0)) +
   scale_x_continuous(expand=c(0,0)) # remove whitespace between both axes and the plot
 ```
@@ -78,13 +78,14 @@ to the above:
 ggplot(data = mtcars, aes(x = hp, y = mpg, color = hp)) +
  geom_point(size=2.5) + 
  theme_arcadia() + 
- gradient_color_arcadia("lisafrank")
+ gradient_color_arcadia(palette_name = "lisafrank")
 ```
 
 ![](man/figures/README-gradient_example-1.png)<!-- -->
 
 There are also bicolor gradients available that are useful for heatmap
-plots:
+plots, and you can also remove the background color with
+`background = FALSE` in the `theme_arcadia()` function:
 
 ``` r
 library(reshape2)
@@ -97,8 +98,8 @@ melted_cor_matrix <- (melt(cor_matrix))
 
 ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() +
-  theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical") +
-  gradient_fill_arcadia("purplegreen") + 
+  theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical", background = FALSE) +
+  gradient_fill_arcadia(palette_name = "purplegreen") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "top") +
   labs(x = "", y = "")
@@ -292,6 +293,6 @@ Briefly:
 ``` r
 # TODO change to main once deployed
 remotes::install_github("Arcadia-Science/arcadiathemeR", \
-ref="EAM/palette-updates", \
+ref="EAM/font-fixes", \
 auth_token=Sys.getenv("GITHUBTOKEN"))
 ```

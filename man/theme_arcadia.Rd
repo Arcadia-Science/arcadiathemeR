@@ -5,17 +5,19 @@
 \title{Arcadia theme adhering to illustration style guides}
 \usage{
 theme_arcadia(
-  base_size = 15,
   x_axis_type = "numerical",
-  y_axis_type = "numerical"
+  y_axis_type = "numerical",
+  background = TRUE
 )
 }
 \arguments{
-\item{base_size}{Default size of text in plot}
-
 \item{x_axis_type}{Type of the x-axis data("categorical" or "numerical")}
 
 \item{y_axis_type}{Type of the y-axis data("categorical" or "numerical")}
+
+\item{background}{Default set to TRUE to have parchment background fill, set to FALSE to be transparent}
+
+\item{base_size}{Default size of text in plot}
 }
 \value{
 Layers onto an existing ggplot2 plot with a theme adhering to Arcadia style guidelines

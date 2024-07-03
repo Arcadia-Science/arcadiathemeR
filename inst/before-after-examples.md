@@ -20,7 +20,7 @@ ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
 ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
   geom_point(size=2.5) +
   theme_arcadia(x_axis_type = "numerical") +
-  scale_color_arcadia("primary")
+  scale_color_arcadia(palette_name = "primary")
 ```
 
 ![](figures/before-after-sepal_width-2.png)<!-- -->
@@ -35,7 +35,7 @@ ggplot(data=iris, aes(x=Species, y=Sepal.Width, fill=Species)) +
 ``` r
 # with arcadiathemeR
 ggplot(data=iris, aes(x=Species, y=Sepal.Width, fill=Species)) +
-  geom_violin() +
+  geom_violin(linewidth = 0) + # remove border around violin plots
   theme_arcadia(x_axis_type = "categorical") +
   scale_fill_arcadia() +
   theme(legend.position = "none")
@@ -64,7 +64,7 @@ ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
 ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() +
   theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical") +
-  gradient_fill_arcadia("reds") + 
+  gradient_fill_arcadia(palette_name = "reds") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "top") +
   labs(x = "", y = "")
