@@ -26,7 +26,7 @@
 #'  theme_arcadia() +
 #'  scale_color_arcadia("primary", start=2, end=5)
 #' }
-scale_color_arcadia <- function(palette_name = "primary", start = 1, end = NULL, reverse = FALSE, ...) {
+scale_color_arcadia <- function(palette_name = "primary_ordered", start = 1, end = NULL, reverse = FALSE, ...) {
   pal <- arcadia_palette(palette_name, start, end, reverse)
   ggplot2::discrete_scale("color", "arcadia", palette = function(n) pal, ...)
 }
@@ -48,7 +48,7 @@ scale_color_arcadia <- function(palette_name = "primary", start = 1, end = NULL,
 #'  theme_arcadia() +
 #'  scale_fill_arcadia("primary", start=2, end=5)
 #' }
-scale_fill_arcadia <- function(palette_name = "primary", start = 1, end = NULL, reverse = FALSE, ...) {
+scale_fill_arcadia <- function(palette_name = "primary_ordered", start = 1, end = NULL, reverse = FALSE, ...) {
   pal <- arcadia_palette(palette_name, start, end, reverse)
   ggplot2::discrete_scale("fill", "arcadia", palette = function(n) pal, ...)
 }
