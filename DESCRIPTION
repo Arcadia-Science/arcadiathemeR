@@ -18,4 +18,5 @@ Imports:
     ggplot2,
     showtext,
     sysfonts,
-    systemfonts
+    systemfonts,
+    scales

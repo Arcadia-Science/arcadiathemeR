@@ -24,7 +24,7 @@
 #' }
 gradient_color_arcadia <- function(palette_name = "magma", reverse = FALSE, ...) {
   pal <- arcadia_gradient_palette(palette_name, reverse)
-  ggplot2::scale_color_gradientn(colors=pal(256), ...)
+  ggplot2::scale_color_gradientn(colors = pal$colors, values = scales::rescale(pal$positions), ...)
 }
 
 #' @rdname scale_arcadia
@@ -46,5 +46,5 @@ gradient_color_arcadia <- function(palette_name = "magma", reverse = FALSE, ...)
 #' }
 gradient_fill_arcadia <- function(palette_name = "magma", reverse = FALSE, ...) {
   pal <- arcadia_gradient_palette(palette_name, reverse)
-  ggplot2::scale_fill_gradientn(colors = pal(256), ...)
+  ggplot2::scale_fill_gradientn(colors = pal$colors, values = scales::rescale(pal$positions), ...)
 }

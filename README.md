@@ -99,7 +99,7 @@ melted_cor_matrix <- (melt(cor_matrix))
 ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() +
   theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical", background = FALSE) +
-  gradient_fill_arcadia(palette_name = "purplegreen") + 
+  gradient_fill_arcadia(palette_name = "reds") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "top") +
   labs(x = "", y = "")

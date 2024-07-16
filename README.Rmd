@@ -75,7 +75,7 @@ ggplot(data = mtcars, aes(x = hp, y = mpg, color = hp)) +
 ```
 
 There are also bicolor gradients available that are useful for heatmap plots, and you can also remove the background color with `background = FALSE` in the `theme_arcadia()` function: 
-```{r, heatmap_example}
+```{r, heatmap_example, warning=FALSE}
 library(reshape2)
 
 # heatmap of correlation matrix from iris dataset
@@ -87,7 +87,7 @@ melted_cor_matrix <- (melt(cor_matrix))
 ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() +
   theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical", background = FALSE) +
-  gradient_fill_arcadia(palette_name = "purplegreen") + 
+  gradient_fill_arcadia(palette_name = "reds") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "top") +
   labs(x = "", y = "")
