@@ -69,7 +69,7 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
     # tick specifications
     axis.ticks.x = x_axis_ticks,
     axis.ticks.y = y_axis_ticks,
-    axis.ticks.length.x = ggplot2::unit(0.07, "in"), # 5 pixels is roughly 0.05 inches
+    axis.ticks.length.x = ggplot2::unit(0.07, "in"), # 5 pixels is roughly 0.07 inches
     axis.ticks.length.y = ggplot2::unit(0.07, "in"),
     axis.line = ggplot2::element_line(color="black", size=0.35), # size ratio to pts is 2.13, so .75 in pts is .35 here
 
