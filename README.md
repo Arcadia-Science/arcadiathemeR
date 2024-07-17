@@ -99,7 +99,7 @@ melted_cor_matrix <- (melt(cor_matrix))
 ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() +
   theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical", background = FALSE) +
-  gradient_fill_arcadia(palette_name = "purplegreen") + 
+  gradient_fill_arcadia(palette_name = "reds") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "top") +
   labs(x = "", y = "")
@@ -278,21 +278,11 @@ show_arcadia_gradients()
 
 ## Development
 
-To install the package locally while in development, follow the
-instructions
-[here](https://stackoverflow.com/questions/21171142/how-to-install-r-package-from-private-repo-using-devtools-install-github).
-Briefly:
-
-1.  Add a `.Renviron` file to the folder where you are going to install
-    this package
-2.  Create a Github personal access token, select “repo” to access
-    private repositories
-3.  Save the token in the `.Renviron` file as `GITHUBTOKEN=<string>`
-4.  Install from a specific branch with:
+To install the package locally from a specific branch while in
+development, do the following:
 
 ``` r
 # TODO change to main once deployed
 remotes::install_github("Arcadia-Science/arcadiathemeR", \
-ref="EAM/font-fixes", \
-auth_token=Sys.getenv("GITHUBTOKEN"))
+ref="EAM/font-fixes"
 ```

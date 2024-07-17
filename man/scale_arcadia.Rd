@@ -9,7 +9,7 @@
 gradient_fill_arcadia(palette_name = "magma", reverse = FALSE, ...)
 
 scale_color_arcadia(
-  palette_name = "primary",
+  palette_name = "primary_ordered",
   start = 1,
   end = NULL,
   reverse = FALSE,
@@ -17,7 +17,7 @@ scale_color_arcadia(
 )
 
 scale_fill_arcadia(
-  palette_name = "primary",
+  palette_name = "primary_ordered",
   start = 1,
   end = NULL,
   reverse = FALSE,

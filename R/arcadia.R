@@ -40,8 +40,8 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
   y_axis_size <- if (y_axis_type == "categorical") 15 else 14.5
 
   # axis ticks
-  x_axis_ticks <- if (x_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.5)
-  y_axis_ticks <- if (y_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.5)
+  x_axis_ticks <- if (x_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.35) # size ratio to pts is 2.13, so .75 in pts is .35 here
+  y_axis_ticks <- if (y_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.35) # size ratio to pts is 2.13, so .75 in pts is .35 here
 
   # background fill
   background_color <- if (background == TRUE) BACKGROUND_FILL else 'transparent'
@@ -51,8 +51,8 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
     # font specifications
   ggplot2::theme(
     plot.title = ggplot2::element_text(family = REGULAR_FONT, size = 16, face = "bold"),
-    axis.title.x = ggplot2::element_text(family = x_axis_label_family, size = 15),
-    axis.title.y = ggplot2::element_text(family = y_axis_label_family, size = 15),
+    axis.title.x = ggplot2::element_text(family = x_axis_label_family, size = 15, vjust = -1),
+    axis.title.y = ggplot2::element_text(family = y_axis_label_family, size = 15, vjust = +2),
     axis.text.x = ggplot2::element_text(family = x_axis_family, size = x_axis_size, color = "black"),
     axis.text.y = ggplot2::element_text(family = y_axis_family, size = y_axis_size, color = "black"),
     legend.title = ggplot2::element_text(family = legend_label_family, size = 16),
@@ -69,7 +69,9 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
     # tick specifications
     axis.ticks.x = x_axis_ticks,
     axis.ticks.y = y_axis_ticks,
-    axis.line = ggplot2::element_line(color="black", size = 0.5),
+    axis.ticks.length.x = ggplot2::unit(0.07, "in"), # 5 pixels is roughly 0.07 inches
+    axis.ticks.length.y = ggplot2::unit(0.07, "in"),
+    axis.line = ggplot2::element_line(color="black", size=0.35), # size ratio to pts is 2.13, so .75 in pts is .35 here
 
     # legend specifications
     legend.background = ggplot2::element_rect(fill = background_color, color = NA),

@@ -76,12 +76,7 @@ arcadia_gradient_palette <- function(gradient_name, reverse = FALSE) {
     positions <- rev(1 - positions)
   }
 
-  function(n) {
-    # Generate colors using the specified positions
-    color_positions <- scales::rescale(seq(0, 1, length.out = n), to = range(positions))
-    colors <- colorRamp(colors)(color_positions)
-    rgb(colors, maxColorValue = 255)
-  }
+  list(colors = colors, positions = positions)
 }
 
 #' Show gradient color palettes as a vector of hex codes
