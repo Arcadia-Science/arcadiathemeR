@@ -81,7 +81,7 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
 REGULAR_FONT <- "Suisse Int'l"
 SEMIBOLD_FONT <- "Suisse Int'l Semi Bold"
 MEDIUM_FONT <- "Suisse Int'l Medium"
-MONO_FONT <- "Suisse Int'l"
+MONO_FONT <- "Suisse Int'l Mono"
 
 # axis label fonts which differ for categorical and numerical data
 CATEGORICAL_FONT <- REGULAR_FONT

@@ -9,7 +9,7 @@
 #'
 load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
   # define font names to check for
-  font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium")
+  font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
 
   # import and load fonts
   # supress messages, below will handle incorrect loading
