@@ -16,7 +16,5 @@ Suggests:
 Config/testthat/edition: 3
 Imports:
     ggplot2,
-    showtext,
-    sysfonts,
-    systemfonts,
+    extrafont,
     scales

@@ -24,8 +24,6 @@
 #' }
 
 theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", background = TRUE) {
-  # load all Suisse fonts and store
-  loaded_suisse_fonts <- load_arcadia_fonts()
 
   # font types
   x_axis_family <- if (x_axis_type == "categorical") CATEGORICAL_FONT else NUMERICAL_FONT
@@ -80,10 +78,10 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
 }
 
 # font constants
-REGULAR_FONT <- "SuisseIntl-Regular"
-SEMIBOLD_FONT <- "SuisseIntl-SemiBold"
-MEDIUM_FONT <- "SuisseIntl-Medium"
-MONO_FONT <- "SuisseIntlMono-Regular"
+REGULAR_FONT <- "Suisse Int'l"
+SEMIBOLD_FONT <- "Suisse Int'l Semi Bold"
+MEDIUM_FONT <- "Suisse Int'l Medium"
+MONO_FONT <- "Suisse Int'l"
 
 # axis label fonts which differ for categorical and numerical data
 CATEGORICAL_FONT <- REGULAR_FONT

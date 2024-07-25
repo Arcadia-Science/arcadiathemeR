@@ -32,6 +32,8 @@ and color palettes in the same fashion as the `ggthemes` package.
 ``` r
 library(ggplot2)
 library(arcadiathemeR)
+#> Loading Suisse fonts...
+#> All custom fonts 'Suisse Int'l, Suisse Int'l Semi Bold, Suisse Int'l Medium' are successfully loaded.
 
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   geom_point(size=2.5) +
