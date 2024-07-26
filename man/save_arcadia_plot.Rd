@@ -4,14 +4,18 @@
 \alias{save_arcadia_plot}
 \title{Save Arcadia Plot}
 \usage{
-save_arcadia_plot(filepath, plot, orientation = c("landscape", "portrait"))
+save_arcadia_plot(
+  filepath,
+  plot,
+  panel_size = c("full_wide", "float_wide", "half_square", "full_square", "float_square")
+)
 }
 \arguments{
 \item{filepath}{The path where the plot will be saved}
 
 \item{plot}{ggplot object to be saved}
 
-\item{orientation}{The orientation of the plot, either "landscape" or "portrait"}
+\item{panel_size}{The size of the panel, one of "full_wide", "float_wide", "half_square", "full_square", "float_square"}
 }
 \value{
 None
@@ -22,6 +26,6 @@ Save Arcadia Plot
 \examples{
 \dontrun{
 p <- ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point()
-save_arcadia_plot(p, "plot.pdf", "landscape")
+save_arcadia_plot(p, "plot.pdf", "full_wide")
 }
 }
