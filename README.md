@@ -16,12 +16,11 @@ remotes::install_github("Arcadia-Science/arcadiathemeR")
 ```
 
 To use the custom fonts you need to download the `TTF` formatted font
-files from the [Arcadia Science Google Drive
-folder](https://drive.google.com/drive/u/1/folders/1xMLKDiaFVVg81xdS03uqsggjzkYyMrqJ)
-and place in the `Users/YOURUSERNAME/Library/Fonts/` directory. This
-should only need to be performed once even if the package is updated
-over time. These steps and functionality have only been confirmed to
-work on Mac OS.
+files and place in the `Users/YOURUSERNAME/Library/Fonts/` directory.
+Check out the Arcadia Science Brand Assets page in Notion to find these.
+This should only need to be performed once even if the package is
+updated over time. These steps and functionality have only been
+confirmed to work on Mac OS.
 
 ## Usage
 
