@@ -16,6 +16,8 @@ save_arcadia_plot(
 \item{plot}{ggplot object to be saved}
 
 \item{panel_size}{The size of the panel, one of "full_wide", "float_wide", "half_square", "full_square", "float_square"}
+
+\item{transparent_bg}{Logical, whether to set the plot background to be transparent}
 }
 \value{
 None

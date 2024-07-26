@@ -7,7 +7,8 @@
 theme_arcadia(
   x_axis_type = "numerical",
   y_axis_type = "numerical",
-  background = TRUE
+  background = TRUE,
+  padding = c(0.25, 0.25, 0.25, 0.25)
 )
 }
 \arguments{

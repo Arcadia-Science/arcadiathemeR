@@ -23,7 +23,7 @@
 #'   theme_arcadia()
 #' }
 
-theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", background = TRUE) {
+theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", background = TRUE, padding = c(.25, .25, .25, .25)) {
 
   # font types
   x_axis_family <- if (x_axis_type == "categorical") CATEGORICAL_FONT else NUMERICAL_FONT
@@ -73,6 +73,7 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
 
     # legend specifications
     legend.background = ggplot2::element_rect(fill = background_color, color = NA),
+    plot.margin = ggplot2::unit(padding, "in")
 
     )
 }
