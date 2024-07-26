@@ -15,6 +15,14 @@ installing the `arcadiathemeR` package.
 remotes::install_github("Arcadia-Science/arcadiathemeR")
 ```
 
+To use the custom fonts you need to download the `TTF` formatted font
+files from the [Arcadia Science Google Drive
+folder](https://drive.google.com/drive/u/1/folders/1xMLKDiaFVVg81xdS03uqsggjzkYyMrqJ)
+and place in the `Users/YOURUSERNAME/Library/Fonts/` directory. This
+should only need to be performed once even if the package is updated
+over time. These steps and functionality have only been confirmed to
+work on Mac OS.
+
 ## Usage
 
 See the full vignette (TBD)
@@ -286,5 +294,5 @@ development, do the following:
 ``` r
 # TODO change to main once deployed
 remotes::install_github("Arcadia-Science/arcadiathemeR", \
-ref="EAM/font-fixes"
+ref="EAM/embed-fonts"
 ```
