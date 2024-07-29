@@ -11,7 +11,11 @@
 #' @examples
 #' \dontrun{
 #' p <- ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point()
-#' save_arcadia_plot(p, "plot.pdf", "full_wide")
+#' save_arcadia_plot("plot_full_wide.pdf", p, "full_wide")
+#' save_arcadia_plot("plot_float_wide.pdf", p, "float_wide")
+#' save_arcadia_plot("plot_half_square.pdf", p, "half_square"
+#' save_arcadia_plot("plot_full_square.pdf", p, "full_square")
+#' save_arcadia_plot("plot_float_square.pdf", p, "float_square")
 #' }
 save_arcadia_plot <- function(filepath, plot, panel_size = c("full_wide", "float_wide", "half_square", "full_square", "float_square")) {
   # Ensure the panel_size argument is valid
@@ -51,12 +55,3 @@ save_arcadia_plot <- function(filepath, plot, panel_size = c("full_wide", "float
     bg = 'transparent'
   )
 }
-
-# Example usage
-# library(ggplot2)
-# p <- ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point()
-# save_arcadia_plot("plot_full_wide.pdf", p, "full_wide")
-# save_arcadia_plot("plot_float_wide.pdf", p, "float_wide")
-# save_arcadia_plot("plot_half_square.pdf", p, "half_square"
-# save_arcadia_plot("plot_full_square.pdf", p, "full_square")
-# save_arcadia_plot("plot_float_square.pdf", p, "float_square")

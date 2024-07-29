@@ -18,6 +18,8 @@ theme_arcadia(
 
 \item{background}{Default set to TRUE to have parchment background fill, set to FALSE to be transparent}
 
+\item{padding}{Amount of padding white-space to add around the plot}
+
 \item{base_size}{Default size of text in plot}
 }
 \value{

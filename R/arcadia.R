@@ -4,6 +4,7 @@
 #' @param x_axis_type Type of the x-axis data("categorical" or "numerical")
 #' @param y_axis_type Type of the y-axis data("categorical" or "numerical")
 #' @param background Default set to TRUE to have parchment background fill, set to FALSE to be transparent
+#' @param padding Amount of padding white-space to add around the plot
 #'
 #'
 #' @return Layers onto an existing ggplot2 plot with a theme adhering to Arcadia style guidelines

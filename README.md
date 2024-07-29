@@ -20,8 +20,9 @@ files and place in the `Users/YOURUSERNAME/Library/Fonts/` directory.
 You can also download the fonts and double click on them to install
 using FontBook with Mac OS. Check out the Arcadia Science Brand Assets
 page in Notion to find these. This should only need to be performed once
-even if the package is updated over time. These steps and functionality
-have only been confirmed to work on Mac OS.
+even if the package is updated over time. If the custom font isn’t
+available then the `sans` font type will be used insetad. These steps
+and functionality have only been confirmed to work on Mac OS.
 
 ## Usage
 

@@ -21,7 +21,7 @@ You can install arcadiathemeR from Github using the `remotes` package. If you do
 remotes::install_github("Arcadia-Science/arcadiathemeR")
 ```
 
-To use the custom fonts you need to download the `TTF` formatted font files and place in the `Users/YOURUSERNAME/Library/Fonts/` directory. You can also download the fonts and double click on them to install using FontBook with Mac OS. Check out the Arcadia Science Brand Assets page in Notion to find these. This should only need to be performed once even if the package is updated over time. These steps and functionality have only been confirmed to work on Mac OS.
+To use the custom fonts you need to download the `TTF` formatted font files and place in the `Users/YOURUSERNAME/Library/Fonts/` directory. You can also download the fonts and double click on them to install using FontBook with Mac OS. Check out the Arcadia Science Brand Assets page in Notion to find these. This should only need to be performed once even if the package is updated over time. If the custom font isn't available then the `sans` font type will be used insetad. These steps and functionality have only been confirmed to work on Mac OS.
 
 ## Usage
 To access the functions in the arcadiathemeR package, load with: 
@@ -63,7 +63,6 @@ plot <- ggplot(data=diamonds, aes(x=cut, fill=cut)) +
   theme(legend.position = "bottom")
 
 save_arcadia_plot("man/figures/arcadia-plot.pdf", plot, panel_size = "full_square")
-
 ```
 
 You can also select different indices of colors from the palettes within the `scale` function:
