@@ -8,23 +8,24 @@
 #' @export
 #'
 load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
-  showtext::showtext_auto(enable = TRUE)
+  # define font names to check for
+  font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
 
-  # get all available fonts across the system
-  available_fonts <- systemfonts::system_fonts()
+  # import and load fonts
+  # supress messages, below will handle incorrect loading
+  suppressMessages({
+    invisible(utils::capture.output(extrafont::font_import(pattern = custom_font, prompt = FALSE)))
+    invisible(utils::capture.output(extrafont::loadfonts(device = "pdf", quiet = TRUE)))
+  })
 
-  # get the custom font
-  custom_font_files <- available_fonts[grepl(custom_font, available_fonts$family), ]
-
-  if (nrow(custom_font_files) > 0) {
-    for (i in 1:nrow(custom_font_files)) {
-      font_path <- custom_font_files$path[i]
-      font_name <- tools::file_path_sans_ext(basename(font_path))
-      sysfonts::font_add(family = font_name, regular = font_path)
-    }
-    return(custom_font)
+  # check if custom font available
+  available_fonts <- extrafont::fonts()
+  missing_fonts <- setdiff(font_names, available_fonts)
+  if (length(missing_fonts) == 0) {
+    cat(sprintf("All custom fonts '%s' are successfully loaded.\n", paste(font_names, collapse = ", ")))
+    return(font_names)
   } else {
-    cat(sprintf("Custom font '%s' not found. Using fallback font '%s'. \n", custom_font, fallback_font))
-    return(fallback_font)
+    cat(sprintf("Custom fonts '%s' not found. Using fallback font '%s'.\n", paste(missing_fonts, collapse = ", "), fallback_font))
+    return(rep(fallback_font, length(font_names)))
   }
 }

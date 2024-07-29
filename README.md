@@ -15,9 +15,16 @@ installing the `arcadiathemeR` package.
 remotes::install_github("Arcadia-Science/arcadiathemeR")
 ```
 
-## Usage
+To use the custom fonts you need to download the `TTF` formatted font
+files and place in the `Users/YOURUSERNAME/Library/Fonts/` directory.
+You can also download the fonts and double click on them to install
+using FontBook with Mac OS. Check out the Arcadia Science Brand Assets
+page in Notion to find these. This should only need to be performed once
+even if the package is updated over time. If the custom font isn’t
+available then the `sans` font type will be used insetad. These steps
+and functionality have only been confirmed to work on Mac OS.
 
-See the full vignette (TBD)
+## Usage
 
 To access the functions in the arcadiathemeR package, load with:
 
@@ -32,6 +39,8 @@ and color palettes in the same fashion as the `ggthemes` package.
 ``` r
 library(ggplot2)
 library(arcadiathemeR)
+#> Loading Suisse fonts...
+#> All custom fonts 'Suisse Int'l, Suisse Int'l Semi Bold, Suisse Int'l Medium, Suisse Int'l Mono' are successfully loaded.
 
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   geom_point(size=2.5) +
@@ -55,6 +64,26 @@ ggplot(data=diamonds, aes(x=cut, fill=cut)) +
 ```
 
 ![](man/figures/README-categorical_plot-1.png)<!-- -->
+
+To save plots, we have a custom `save_arcadia_plot()` function built on
+top of `ggsave()` that helps you export plots that adhere to our size
+guidelines and can be used with the Illustrator templates. The different
+plot size options are
+`"full_wide", "float_wide", "half_square", "full_square",` or
+`"float_square"`. Additionally for the background to be transparent in
+exported plots you need to set this argument to `FALSE` in the
+`theme_arcadia()` function:
+
+``` r
+plot <- ggplot(data=diamonds, aes(x=cut, fill=cut)) +
+  geom_bar() +
+  theme_arcadia(x_axis_type = "categorical", background = FALSE) +
+  scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
+  scale_y_continuous(expand=c(0,0)) + # removes whitespace between axis and bars
+  theme(legend.position = "bottom")
+
+save_arcadia_plot("man/figures/arcadia-plot.pdf", plot, panel_size = "full_square")
+```
 
 You can also select different indices of colors from the palettes within
 the `scale` function:
@@ -284,5 +313,5 @@ development, do the following:
 ``` r
 # TODO change to main once deployed
 remotes::install_github("Arcadia-Science/arcadiathemeR", \
-ref="EAM/font-fixes"
+ref="EAM/embed-fonts"
 ```

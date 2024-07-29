@@ -11,12 +11,12 @@ Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown=TRUE)
 RoxygenNote: 7.3.1
+Depends:
+    R (>= 4.0)
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
 Imports:
     ggplot2,
-    showtext,
-    sysfonts,
-    systemfonts,
+    extrafont,
     scales

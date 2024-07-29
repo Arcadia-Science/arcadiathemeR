@@ -4,6 +4,7 @@
 #' @param x_axis_type Type of the x-axis data("categorical" or "numerical")
 #' @param y_axis_type Type of the y-axis data("categorical" or "numerical")
 #' @param background Default set to TRUE to have parchment background fill, set to FALSE to be transparent
+#' @param padding Amount of padding white-space to add around the plot
 #'
 #'
 #' @return Layers onto an existing ggplot2 plot with a theme adhering to Arcadia style guidelines
@@ -23,9 +24,7 @@
 #'   theme_arcadia()
 #' }
 
-theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", background = TRUE) {
-  # load all Suisse fonts and store
-  loaded_suisse_fonts <- load_arcadia_fonts()
+theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", background = TRUE, padding = c(.25, .25, .25, .25)) {
 
   # font types
   x_axis_family <- if (x_axis_type == "categorical") CATEGORICAL_FONT else NUMERICAL_FONT
@@ -75,15 +74,16 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
 
     # legend specifications
     legend.background = ggplot2::element_rect(fill = background_color, color = NA),
+    plot.margin = ggplot2::unit(padding, "in")
 
     )
 }
 
 # font constants
-REGULAR_FONT <- "SuisseIntl-Regular"
-SEMIBOLD_FONT <- "SuisseIntl-SemiBold"
-MEDIUM_FONT <- "SuisseIntl-Medium"
-MONO_FONT <- "SuisseIntlMono-Regular"
+REGULAR_FONT <- "Suisse Int'l"
+SEMIBOLD_FONT <- "Suisse Int'l Semi Bold"
+MEDIUM_FONT <- "Suisse Int'l Medium"
+MONO_FONT <- "Suisse Int'l Mono"
 
 # axis label fonts which differ for categorical and numerical data
 CATEGORICAL_FONT <- REGULAR_FONT

@@ -7,7 +7,8 @@
 theme_arcadia(
   x_axis_type = "numerical",
   y_axis_type = "numerical",
-  background = TRUE
+  background = TRUE,
+  padding = c(0.25, 0.25, 0.25, 0.25)
 )
 }
 \arguments{
@@ -16,6 +17,8 @@ theme_arcadia(
 \item{y_axis_type}{Type of the y-axis data("categorical" or "numerical")}
 
 \item{background}{Default set to TRUE to have parchment background fill, set to FALSE to be transparent}
+
+\item{padding}{Amount of padding white-space to add around the plot}
 
 \item{base_size}{Default size of text in plot}
 }
