@@ -7,15 +7,16 @@
 save_arcadia_plot(
   filepath,
   plot,
-  panel_size = c("full_wide", "float_wide", "half_square", "full_square", "float_square")
+  panel_size = names(PANEL_OPTIONS),
+  transparent_bg = TRUE
 )
 }
 \arguments{
 \item{filepath}{The path where the plot will be saved}
 
-\item{plot}{ggplot object to be saved}
+\item{plot}{ggplot object to be saved as both a PDF and PNG}
 
-\item{panel_size}{The size of the panel, one of "full_wide", "float_wide", "half_square", "full_square", "float_square"}
+\item{panel_size}{The size of the panel, one of "full_wide", "float_wide", "half_square", "full_square", "float_square", "landscape", and "portrait"}
 
 \item{transparent_bg}{Logical, whether to set the plot background to be transparent}
 }
@@ -28,10 +29,10 @@ Save Arcadia Plot
 \examples{
 \dontrun{
 p <- ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point()
-save_arcadia_plot("plot_full_wide.pdf", p, "full_wide")
-save_arcadia_plot("plot_float_wide.pdf", p, "float_wide")
-save_arcadia_plot("plot_half_square.pdf", p, "half_square"
-save_arcadia_plot("plot_full_square.pdf", p, "full_square")
-save_arcadia_plot("plot_float_square.pdf", p, "float_square")
+save_arcadia_plot("plot_full_wide", p, "full_wide")
+save_arcadia_plot("/path/to/figs/folder/plot_float_wide", p, "float_wide")
+save_arcadia_plot("plot_half_square", p, "half_square"
+save_arcadia_plot("plot_full_square", p, "full_square")
+save_arcadia_plot("plot_float_square", p, "float_square")
 }
 }
