@@ -216,12 +216,16 @@ BLUES <- list(colors = c(LAPIS, AEGEAN, ZEPHYR), positions = c(0, 0.254, 1.0))
 
 PURPLES <- list(colors = c(LILAC, ASTER, GHOST), positions = c(0, 0.144, 1.0))
 
-# Bicolor gradients
-# combine the gradients and inherit positions
+# create bicolor gradients
 combine_gradients <- function(grad1, grad2) {
+  # rescale positions to fit within [0, 0.5] and [0.5, 1]
+  rescaled_grad1_positions <- grad1$positions * 0.5
+  rescaled_grad2_positions <- grad2$positions * 0.5 + 0.5
+
+  # combine colors and the rescaled positions
   colors <- c(grad1$colors, rev(grad2$colors))
   # Rescale the positions to fit the combined gradient
-  positions <- c(grad1$positions, rev(grad2$positions) + (1 - max(grad2$positions)))
+  positions <- c(rescaled_grad1_positions, rescaled_grad2_positions)
   list(colors = colors, positions = scales::rescale(positions))
 }
 

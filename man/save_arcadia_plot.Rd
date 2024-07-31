@@ -8,7 +8,8 @@ save_arcadia_plot(
   filepath,
   plot,
   panel_size = names(PANEL_OPTIONS),
-  transparent_bg = TRUE
+  transparent_bg = TRUE,
+  formats = c("pdf")
 )
 }
 \arguments{
@@ -19,6 +20,8 @@ save_arcadia_plot(
 \item{panel_size}{The size of the panel, one of "full_wide", "float_wide", "half_square", "full_square", "float_square", "landscape", and "portrait"}
 
 \item{transparent_bg}{Logical, whether to set the plot background to be transparent}
+
+\item{formats}{Vector of file formats to export the plot as. Default is "pdf". Can be "pdf", "png", or both.}
 }
 \value{
 None
