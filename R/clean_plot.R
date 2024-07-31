@@ -22,17 +22,19 @@ ggplot_add.clean_plot <- function(object, plot, object_name) {
   # Turn axis titles into sentence case
   if (!is.null(plot$labels$x)) {
     x_label <- plot$labels$x
-    plot <- plot + ggplot2::labs(x = snakecase::to_sentence_case(x_label, sep_out = " "))
+    plot <- plot +
+      ggplot2::labs(x = snakecase::to_sentence_case(x_label, sep_out = " "))
   }
 
   if (!is.null(plot$labels$y)) {
     y_label <- plot$labels$y
-    plot <- plot + ggplot2::labs(y = snakecase::to_sentence_case(y_label, sep_out = " "))
+    plot <- plot +
+      ggplot2::labs(y = snakecase::to_sentence_case(y_label, sep_out = " "))
   }
 
   # Pull out layers
   layers <- plot$layers
-  
+
   # Getting info on geoms
   contains_tile <- any(sapply(layers, function(layer) {
     inherits(layer$geom, "GeomTile")
@@ -50,17 +52,17 @@ ggplot_add.clean_plot <- function(object, plot, object_name) {
     inherits(layer$geom, "GeomDensity")
   }))
 
-  # Check if plot is a geom_tile and remove axis lines if it is, and 
+  # Check if plot is a geom_tile and remove axis lines if it is, and
   # removes whitespace between axis and data
   if (contains_tile) {
-    plot <- plot + 
+    plot <- plot +
       ggplot2::theme(
         axis.line = element_blank(),
         axis.ticks.x = element_blank(),
         axis.ticks.y = element_blank()
       ) +
-      ggplot2::scale_x_continuous(expand = c(0,0)) +
-      ggplot2::scale_y_continuous(expand = c(0,0))
+      ggplot2::scale_x_discrete(expand = c(0,0)) +
+      ggplot2::scale_y_discrete(expand = c(0,0))
   }
 
   # If a density plot or histogram, remove whitespace for both axes
