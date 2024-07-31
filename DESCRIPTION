@@ -19,4 +19,5 @@ Config/testthat/edition: 3
 Imports:
     ggplot2,
     extrafont,
-    scales
+    scales,
+    snakecase
