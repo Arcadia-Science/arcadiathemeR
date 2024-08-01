@@ -70,10 +70,35 @@ ggplot(data=diamonds, aes(x=cut, fill=cut)) +
 
 ![](man/figures/README-categorical_plot-1.png)<!-- -->
 
+<<<<<<< HEAD
 ### Exporting plots
 
 To save plots, we have a custom `save_arcadia_plot` function built on
 top of `ggsave` that helps you export plots that adhere to our size
+=======
+Sometimes you’ll want to add additional Arcadia styling to your plots.
+The `clean_plot()` `ggplot` extension function handles this styling for
+you. The function will automatically (1) capitalize the first word of
+your axis titles, (2) remove whitespace between your axis and data if
+your plot is a bar plot, histogram, density plot, or heatmap, and (3)
+remove axis lines and ticks if your plot is a heatmap. To use the
+function, simply add it to your `ggplot` object like so:
+
+``` r
+ggplot(data=diamonds, aes(x=cut, fill=cut)) +
+  geom_bar() +
+  theme_arcadia(x_axis_type = "categorical") +
+  scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
+  labs(x = "diamond cut", y = "count") +
+  theme(legend.position = "none") +
+  clean_plot()
+```
+
+![](man/figures/README-clean_plot-1.png)<!-- -->
+
+To save plots, we have a custom `save_arcadia_plot()` function built on
+top of `ggsave()` that helps you export plots that adhere to our size
+>>>>>>> main
 guidelines and can be used with the Illustrator templates. The different
 plot size options are
 `"full_wide", "float_wide", "half_square", "full_square",` or
@@ -88,7 +113,7 @@ plot <- ggplot(data=diamonds, aes(x=cut, fill=cut)) +
   geom_bar() +
   theme_arcadia(x_axis_type = "categorical", background = FALSE) +
   scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
-  scale_y_continuous(expand=c(0,0)) + # removes whitespace between axis and bars
+  clean_plot() +
   theme(legend.position = "bottom")
 
 save_arcadia_plot("man/figures/arcadia-plot", plot, panel_size = "full_square", formats = c("pdf", "png"))
@@ -101,9 +126,8 @@ the `scale` function:
 ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
   geom_density(alpha = 0.8, linewidth = 0) + # remove border line from filled-in density plots
   theme_arcadia() +
-  scale_fill_arcadia(palette_name = "blue_shades", start=2, end=5) +
-  scale_y_continuous(expand=c(0,0)) +
-  scale_x_continuous(expand=c(0,0)) # remove whitespace between both axes and the plot
+  clean_plot() +
+  scale_fill_arcadia(palette_name = "blue_shades", start=2, end=5) 
 ```
 
 ![](man/figures/README-scale_index-1.png)<!-- -->
@@ -141,10 +165,16 @@ ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical", background = FALSE) +
   gradient_fill_arcadia(palette_name = "purplegreen") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
+<<<<<<< HEAD
         legend.position = "top", axis.line = element_blank()) +
   labs(x = "", y = "") +
   scale_y_discrete(expand=c(0,0)) +
   scale_x_discrete(expand = c(0,0))
+=======
+        legend.position = "top") +
+  labs(x = "", y = "") +
+  clean_plot()
+>>>>>>> main
 ```
 
 ![](man/figures/README-heatmap_example-1.png)<!-- -->
