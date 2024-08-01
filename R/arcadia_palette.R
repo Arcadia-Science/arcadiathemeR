@@ -226,7 +226,7 @@ combine_gradients <- function(grad1, grad2) {
   colors <- c(grad1$colors, rev(grad2$colors))
   # Rescale the positions to fit the combined gradient
   positions <- c(rescaled_grad1_positions, rescaled_grad2_positions)
-  list(colors = colors, positions = scales::rescale(positions))
+  list(colors = colors, positions = positions)
 }
 
 # composite gradients

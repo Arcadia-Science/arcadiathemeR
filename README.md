@@ -70,12 +70,21 @@ ggplot(data=diamonds, aes(x=cut, fill=cut)) +
 
 ![](man/figures/README-categorical_plot-1.png)<!-- -->
 
-<<<<<<< HEAD
-### Exporting plots
+You can also select different indices of colors from the palettes within
+the `scale` function:
 
-To save plots, we have a custom `save_arcadia_plot` function built on
-top of `ggsave` that helps you export plots that adhere to our size
-=======
+``` r
+ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
+  geom_density(alpha = 0.8, linewidth = 0) + # remove border line from filled-in density plots
+  theme_arcadia() +
+  clean_plot() +
+  scale_fill_arcadia(palette_name = "blue_shades", start=2, end=5) 
+```
+
+![](man/figures/README-scale_index-1.png)<!-- -->
+
+### Cleaning plots with additional styling
+
 Sometimes you’ll want to add additional Arcadia styling to your plots.
 The `clean_plot()` `ggplot` extension function handles this styling for
 you. The function will automatically (1) capitalize the first word of
@@ -96,17 +105,16 @@ ggplot(data=diamonds, aes(x=cut, fill=cut)) +
 
 ![](man/figures/README-clean_plot-1.png)<!-- -->
 
+### Exporting plots
+
 To save plots, we have a custom `save_arcadia_plot()` function built on
 top of `ggsave()` that helps you export plots that adhere to our size
->>>>>>> main
 guidelines and can be used with the Illustrator templates. The different
 plot size options are
 `"full_wide", "float_wide", "half_square", "full_square",` or
-`"float_square"`. By default the plot is exported as a PDF, but you can
-also save a PDF and PNG at the same time withe same filepath names, but
-the exports will differ by the file extension. Additionally for the
-background to be transparent in exported plots you need to set this
-argument to `FALSE` in the `theme_arcadia` function:
+`"float_square"`. Additionally for the background to be transparent in
+exported plots you need to set this argument to `FALSE` in the
+`theme_arcadia()` function:
 
 ``` r
 plot <- ggplot(data=diamonds, aes(x=cut, fill=cut)) +
@@ -118,19 +126,6 @@ plot <- ggplot(data=diamonds, aes(x=cut, fill=cut)) +
 
 save_arcadia_plot("man/figures/arcadia-plot", plot, panel_size = "full_square", formats = c("pdf", "png"))
 ```
-
-You can also select different indices of colors from the palettes within
-the `scale` function:
-
-``` r
-ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
-  geom_density(alpha = 0.8, linewidth = 0) + # remove border line from filled-in density plots
-  theme_arcadia() +
-  clean_plot() +
-  scale_fill_arcadia(palette_name = "blue_shades", start=2, end=5) 
-```
-
-![](man/figures/README-scale_index-1.png)<!-- -->
 
 ### Gradient Palettes
 
@@ -165,16 +160,9 @@ ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical", background = FALSE) +
   gradient_fill_arcadia(palette_name = "purplegreen") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
-<<<<<<< HEAD
-        legend.position = "top", axis.line = element_blank()) +
-  labs(x = "", y = "") +
-  scale_y_discrete(expand=c(0,0)) +
-  scale_x_discrete(expand = c(0,0))
-=======
         legend.position = "top") +
   labs(x = "", y = "") +
   clean_plot()
->>>>>>> main
 ```
 
 ![](man/figures/README-heatmap_example-1.png)<!-- -->
