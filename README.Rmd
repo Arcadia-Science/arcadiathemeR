@@ -29,7 +29,7 @@ To access the functions in the arcadiathemeR package, load with:
 library(arcadiathemeR)
 ```
 
-The arcadiathemeR package is modeled after the [`ggthemes` package](https://github.com/jrnold/ggthemes), layering on the plot theme and color palettes in the same fashion as the `ggthemes` package. 
+The arcadiathemeR package is modeled after the [`ggthemes` package](https://github.com/jrnold/ggthemes), layering on the plot theme and color palettes in the same fashion as the `ggthemes` package. There are two main functions to layer on top of existing `ggplot2` plots, the `theme_arcadia` function and the `scale` function, where the particular `scale` function used depends on if you call `color` or `fill`:
 
 ```{r, base_use}
 library(ggplot2)
@@ -41,6 +41,7 @@ ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   scale_color_arcadia(palette_name = "primary")
 ```
 
+### Adjusting default behavior
 By default the `theme_arcadia()` function assumes that both axes are numerical data. Since we have different font and plot styles for categorical data, you can specify if the axis is categorical with: 
 
 ```{r, categorical_plot}
@@ -50,30 +51,6 @@ ggplot(data=diamonds, aes(x=cut, fill=cut)) +
   scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
   scale_y_continuous(expand=c(0,0)) + # removes whitespace between axis and bars
   theme(legend.position = "bottom")
-```
-
-Sometimes you'll want to add additional Arcadia styling to your plots. The `clean_plot()` `ggplot` extension function handles this styling for you. The function will automatically (1) capitalize the first word of your axis titles, (2) remove whitespace between your axis and data if your plot is a bar plot, histogram, density plot, or heatmap, and (3) remove axis lines and ticks if your plot is a heatmap. To use the function, simply add it to your `ggplot` object like so:
-```{r clean_plot}
-ggplot(data=diamonds, aes(x=cut, fill=cut)) +
-  geom_bar() +
-  theme_arcadia(x_axis_type = "categorical") +
-  scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
-  labs(x = "diamond cut", y = "count") +
-  theme(legend.position = "none") +
-  clean_plot()
-```
-
-
-To save plots, we have a custom `save_arcadia_plot()` function built on top of `ggsave()` that helps you export plots that adhere to our size guidelines and can be used with the Illustrator templates. The different plot size options are `"full_wide", "float_wide", "half_square", "full_square",` or `"float_square"`. Additionally for the background to be transparent in exported plots you need to set this argument to `FALSE` in the `theme_arcadia()` function:
-```{r, export_plot}
-plot <- ggplot(data=diamonds, aes(x=cut, fill=cut)) +
-  geom_bar() +
-  theme_arcadia(x_axis_type = "categorical", background = FALSE) +
-  scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
-  clean_plot() +
-  theme(legend.position = "bottom")
-
-save_arcadia_plot("man/figures/arcadia-plot.pdf", plot, panel_size = "full_square")
 ```
 
 You can also select different indices of colors from the palettes within the `scale` function:
@@ -86,14 +63,39 @@ ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
   scale_fill_arcadia(palette_name = "blue_shades", start=2, end=5) 
 ```
 
+### Cleaning plots with additional styling
+Sometimes you'll want to add additional Arcadia styling to your plots. The `clean_plot()` `ggplot` extension function handles this styling for you. The function will automatically (1) capitalize the first word of your axis titles, (2) remove whitespace between your axis and data if your plot is a bar plot, histogram, density plot, or heatmap, and (3) remove axis lines and ticks if your plot is a heatmap. To use the function, simply add it to your `ggplot` object like so:
+```{r, clean_plot}
+ggplot(data=diamonds, aes(x=cut, fill=cut)) +
+  geom_bar() +
+  theme_arcadia(x_axis_type = "categorical") +
+  scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
+  labs(x = "diamond cut", y = "count") +
+  theme(legend.position = "none") +
+  clean_plot()
+```
 
+### Exporting plots
+To save plots, we have a custom `save_arcadia_plot()` function built on top of `ggsave()` that helps you export plots that adhere to our size guidelines and can be used with the Illustrator templates. The different plot size options are `"full_wide", "float_wide", "half_square", "full_square",` or `"float_square"`. Additionally for the background to be transparent in exported plots you need to set this argument to `FALSE` in the `theme_arcadia()` function:
+
+```{r, export_plot}
+plot <- ggplot(data=diamonds, aes(x=cut, fill=cut)) +
+  geom_bar() +
+  theme_arcadia(x_axis_type = "categorical", background = FALSE) +
+  scale_fill_arcadia(palette_name = "secondary", reverse = TRUE) +
+  clean_plot() +
+  theme(legend.position = "bottom")
+
+save_arcadia_plot("man/figures/arcadia-plot", plot, panel_size = "full_square", formats = c("pdf", "png"))
+```
+
+### Gradient Palettes
 You can also apply gradient palettes to your plots with `gradient_fill_arcadia` or `gradient_scale_arcadia` in a similar fashion to the above: 
 ```{r, gradient_example}
 ggplot(data = mtcars, aes(x = hp, y = mpg, color = hp)) +
  geom_point(size=2.5) + 
  theme_arcadia() + 
  gradient_color_arcadia(palette_name = "lisafrank")
-
 ```
 
 There are also bicolor gradients available that are useful for heatmap plots, and you can also remove the background color with `background = FALSE` in the `theme_arcadia()` function: 
@@ -109,14 +111,14 @@ melted_cor_matrix <- (melt(cor_matrix))
 ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() +
   theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical", background = FALSE) +
-  gradient_fill_arcadia(palette_name = "reds") + 
+  gradient_fill_arcadia(palette_name = "purplegreen") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "top") +
   labs(x = "", y = "") +
   clean_plot()
-
 ```
 
+### View all palette options
 You can view all the color palette options and the individual hex codes composing each palette within the main and gradient palettes with:
 ```{r}
 show_arcadia_palettes()
