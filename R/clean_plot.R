@@ -3,14 +3,11 @@
 #' Generalized extension function for ggplot cleanup. Right now, cleans up axis titles and removes axis lines and whitespace depending on geom type.
 #'
 #' @return A ggplot object with capitalized axis titles
-#' @import ggplot2
-#' @import snakecase
+#' @importFrom ggplot2 ggplot_add
 #' @export
 #'
 #' @examples
 #' \dontrun{
-#' library(ggplot2)
-#' library(snakecase)
 #' p <- ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point() + labs(x = "horsepower", y = "miles per gallon") + clean_plot()
 #' }
 clean_plot <- function() {
@@ -57,9 +54,9 @@ ggplot_add.clean_plot <- function(object, plot, object_name) {
   if (contains_tile) {
     plot <- plot +
       ggplot2::theme(
-        axis.line = element_blank(),
-        axis.ticks.x = element_blank(),
-        axis.ticks.y = element_blank()
+        axis.line = ggplot2::element_blank(),
+        axis.ticks.x = ggplot2::element_blank(),
+        axis.ticks.y = ggplot2::element_blank()
       ) +
       ggplot2::scale_x_discrete(expand = c(0,0)) +
       ggplot2::scale_y_discrete(expand = c(0,0))

@@ -14,8 +14,6 @@ Generalized extension function for ggplot cleanup. Right now, cleans up axis tit
 }
 \examples{
 \dontrun{
-library(ggplot2)
-library(snakecase)
 p <- ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point() + labs(x = "horsepower", y = "miles per gallon") + clean_plot()
 }
 }
