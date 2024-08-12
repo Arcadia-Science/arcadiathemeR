@@ -32,10 +32,8 @@ Save Arcadia Plot
 \examples{
 \dontrun{
 p <- ggplot(mtcars, aes(x = hp, y = mpg)) + geom_point()
-save_arcadia_plot("plot_full_wide", p, "full_wide")
-save_arcadia_plot("/path/to/figs/folder/plot_float_wide", p, "float_wide", formats = c("pdf", "png"))
-save_arcadia_plot("plot_half_square", p, "half_square", formats = "png")
-save_arcadia_plot("plot_full_square", p, "full_square")
-save_arcadia_plot("plot_float_square", p, "float_square")
+save_arcadia_plot(filepath = "plot_full_wide", plot = p, panel_size = "full_wide")
+save_arcadia_plot(filepath = "/path/to/figs/folder/plot_float_wide", plot = p, panel_size = "float_wide", formats = c("pdf", "png"))
+save_arcadia_plot(filepath = "plot_half_square", plot = p, panel_size = "half_square", formats = "png")
 }
 }
