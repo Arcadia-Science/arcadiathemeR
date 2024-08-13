@@ -216,7 +216,7 @@ BLUES <- list(colors = c(LAPIS, AEGEAN, ZEPHYR), positions = c(0, 0.254, 1.0))
 
 PURPLES <- list(colors = c(LILAC, ASTER, GHOST), positions = c(0, 0.144, 1.0))
 
-ORANGE_SAGE <- list(colors = c(TERRACOTTA, TANGERINE, DAWN, LICHEN, SAGE, ASPARAGUS), positions = c(0, 0.3805, 0.5, 0.55, 0.8205, 1))
+ORANGE_SAGE <- list(colors = c(TERRACOTTA, TANGERINE, DAWN, LICHEN, SAGE, ASPARAGUS), positions = c(0, 0.3805, 0.49, 0.51, 0.8205, 1))
 
 RED_BLUE <- list(colors = c(CINNABAR, DRAGON, BLUSH, ZEPHYR, AEGEAN, LAPIS), positions = c(0, 0.106, 0.5, 0.55, 0.627, 1))
 
