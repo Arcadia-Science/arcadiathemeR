@@ -220,7 +220,7 @@ ORANGE_SAGE <- list(colors = c(TERRACOTTA, TANGERINE, DAWN, LICHEN, SAGE, ASPARA
 
 RED_BLUE <- list(colors = c(CINNABAR, DRAGON, BLUSH, ZEPHYR, AEGEAN, LAPIS), positions = c(0, 0.106, 0.49, 0.51, 0.627, 1))
 
-PURPLE_GREEN <- list(colors = c(LILAC, ASTER, GHOST, LICHEN, LIME, FERN), positions = c(0, .072, 0.5, 0.55, 0.811, 1))
+PURPLE_GREEN <- list(colors = c(LILAC, ASTER, GHOST, LICHEN, LIME, FERN), positions = c(0, .072, 0.49, 0.51, 0.811, 1))
 
 # Palette lists and names
 
