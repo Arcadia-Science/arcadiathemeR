@@ -216,19 +216,11 @@ BLUES <- list(colors = c(LAPIS, AEGEAN, ZEPHYR), positions = c(0, 0.254, 1.0))
 
 PURPLES <- list(colors = c(LILAC, ASTER, GHOST), positions = c(0, 0.144, 1.0))
 
-# Bicolor gradients
-# combine the gradients and inherit positions
-combine_gradients <- function(grad1, grad2) {
-  colors <- c(grad1$colors, rev(grad2$colors))
-  # Rescale the positions to fit the combined gradient
-  positions <- c(grad1$positions, rev(grad2$positions) + (1 - max(grad2$positions)))
-  list(colors = colors, positions = scales::rescale(positions))
-}
+ORANGE_SAGE <- list(colors = c(TERRACOTTA, TANGERINE, DAWN, LICHEN, SAGE, ASPARAGUS), positions = c(0, 0.3805, 0.49, 0.51, 0.8205, 1))
 
-# composite gradients
-ORANGE_SAGE <- combine_gradients(ORANGES, SAGES)
-RED_BLUE <- combine_gradients(REDS, BLUES)
-PURPLE_GREEN <- combine_gradients(PURPLES, GREENS)
+RED_BLUE <- list(colors = c(CINNABAR, DRAGON, BLUSH, ZEPHYR, AEGEAN, LAPIS), positions = c(0, 0.106, 0.49, 0.51, 0.627, 1))
+
+PURPLE_GREEN <- list(colors = c(LILAC, ASTER, GHOST, LICHEN, LIME, FERN), positions = c(0, .072, 0.49, 0.51, 0.811, 1))
 
 # Palette lists and names
 

@@ -34,7 +34,10 @@ library(arcadiathemeR)
 
 The arcadiathemeR package is modeled after the [`ggthemes`
 package](https://github.com/jrnold/ggthemes), layering on the plot theme
-and color palettes in the same fashion as the `ggthemes` package.
+and color palettes in the same fashion as the `ggthemes` package. There
+are two main functions to layer on top of existing `ggplot2` plots, the
+`theme_arcadia` function and the `scale` function, where the particular
+`scale` function used depends on if you call `color` or `fill`:
 
 ``` r
 library(ggplot2)
@@ -50,6 +53,8 @@ ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
 
 ![](man/figures/README-base_use-1.png)<!-- -->
 
+### Adjusting default behavior
+
 By default the `theme_arcadia()` function assumes that both axes are
 numerical data. Since we have different font and plot styles for
 categorical data, you can specify if the axis is categorical with:
@@ -64,6 +69,21 @@ ggplot(data=diamonds, aes(x=cut, fill=cut)) +
 ```
 
 ![](man/figures/README-categorical_plot-1.png)<!-- -->
+
+You can also select different indices of colors from the palettes within
+the `scale` function:
+
+``` r
+ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
+  geom_density(alpha = 0.8, linewidth = 0) + # remove border line from filled-in density plots
+  theme_arcadia() +
+  clean_plot() +
+  scale_fill_arcadia(palette_name = "blue_shades", start=2, end=5) 
+```
+
+![](man/figures/README-scale_index-1.png)<!-- -->
+
+### Cleaning plots with additional styling
 
 Sometimes you’ll want to add additional Arcadia styling to your plots.
 The `clean_plot()` `ggplot` extension function handles this styling for
@@ -85,6 +105,8 @@ ggplot(data=diamonds, aes(x=cut, fill=cut)) +
 
 ![](man/figures/README-clean_plot-1.png)<!-- -->
 
+### Exporting plots
+
 To save plots, we have a custom `save_arcadia_plot()` function built on
 top of `ggsave()` that helps you export plots that adhere to our size
 guidelines and can be used with the Illustrator templates. The different
@@ -102,21 +124,10 @@ plot <- ggplot(data=diamonds, aes(x=cut, fill=cut)) +
   clean_plot() +
   theme(legend.position = "bottom")
 
-save_arcadia_plot("man/figures/arcadia-plot.pdf", plot, panel_size = "full_square")
+save_arcadia_plot("man/figures/arcadia-plot", plot, panel_size = "full_square", formats = c("pdf", "png"))
 ```
 
-You can also select different indices of colors from the palettes within
-the `scale` function:
-
-``` r
-ggplot(mtcars, aes(x = hp, fill = as.factor(cyl))) +
-  geom_density(alpha = 0.8, linewidth = 0) + # remove border line from filled-in density plots
-  theme_arcadia() +
-  clean_plot() +
-  scale_fill_arcadia(palette_name = "blue_shades", start=2, end=5) 
-```
-
-![](man/figures/README-scale_index-1.png)<!-- -->
+### Gradient Palettes
 
 You can also apply gradient palettes to your plots with
 `gradient_fill_arcadia` or `gradient_scale_arcadia` in a similar fashion
@@ -147,7 +158,7 @@ melted_cor_matrix <- (melt(cor_matrix))
 ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
   geom_tile() +
   theme_arcadia(x_axis_type = "categorical", y_axis_type = "categorical", background = FALSE) +
-  gradient_fill_arcadia(palette_name = "reds") + 
+  gradient_fill_arcadia(palette_name = "purplegreen") + 
   theme(axis.text.x = element_text(angle = 45, hjust = 1),
         legend.position = "top") +
   labs(x = "", y = "") +
@@ -155,6 +166,8 @@ ggplot(melted_cor_matrix, aes(x=Var1, y=Var2, fill=value)) +
 ```
 
 ![](man/figures/README-heatmap_example-1.png)<!-- -->
+
+### View all palette options
 
 You can view all the color palette options and the individual hex codes
 composing each palette within the main and gradient palettes with:
@@ -274,7 +287,7 @@ show_arcadia_gradients()
 #> [1] "#964222" "#FFB984" "#F8F4F1" "#F7FBEF" "#B5BEA4" "#2A6B5E"
 #> 
 #> $orangesage$positions
-#> [1] 0.000 0.761 1.000 1.000 0.641 0.000
+#> [1] 0.0000 0.3805 0.4900 0.5100 0.8205 1.0000
 #> 
 #> 
 #> $reds
@@ -298,7 +311,7 @@ show_arcadia_gradients()
 #> [1] "#9E3F41" "#C85152" "#FFF3F4" "#F4FBFF" "#5088C5" "#2B65A1"
 #> 
 #> $redblue$positions
-#> [1] 0.000 0.212 1.000 1.000 0.254 0.000
+#> [1] 0.000 0.106 0.490 0.510 0.627 1.000
 #> 
 #> 
 #> $purples
@@ -322,7 +335,7 @@ show_arcadia_gradients()
 #> [1] "#6862AB" "#7A77AB" "#FCF7FF" "#F7FBEF" "#97CD78" "#47784A"
 #> 
 #> $purplegreen$positions
-#> [1] 0.000 0.144 1.000 1.000 0.622 0.000
+#> [1] 0.000 0.072 0.490 0.510 0.811 1.000
 ```
 
 ## Development
