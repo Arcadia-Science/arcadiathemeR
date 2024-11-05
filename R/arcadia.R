@@ -75,11 +75,14 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
     # legend specifications
     legend.background = ggplot2::element_rect(fill = background_color, color = NA),
     plot.margin = ggplot2::unit(padding, "in")
-
-    )
+  )
 }
 
 # font constants
+FONT <- "Suisse"
+if (!(custom_font %in% available_fonts)) {
+  FONT <- system("fc-match -f '%%{family}' sans", intern = TRUE)
+}
 REGULAR_FONT <- paste(FONT, "Int'l")
 SEMIBOLD_FONT <- paste(FONT, "Int'l Semi Bold")
 MEDIUM_FONT <- paste(FONT, "Int'l Medium")
