@@ -1,3 +1,21 @@
+#' Get font family
+#'
+#' This function returns the font family to be used. It checks if the custom font is available in the list of available fonts. If the custom font is not available, it uses a fallback font.
+#'
+#' @param available_fonts Available font names.
+#' @param custom_font Custom font family name to be used.
+#' @param fallback_font Fallback font family name to be used in case custom font is not available.
+#' 
+#' @return Font family to be used in plots.
+#' @export
+#'
+get_font_family <- function(available_fonts, custom_font = "Suisse", fallback_font = "sans") {
+  if (!(custom_font %in% available_fonts)) {
+    font_family <- system(sprintf("fc-match -f '%%{family}' %s", font_family), intern = TRUE)
+    return(font_family)
+  }
+  return(custom_font)
+}
 
 #' Load in custom fonts
 #'
@@ -9,19 +27,14 @@
 #'
 load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
   # define font names to check for
+  available_fonts <- extrafont::fonts()
   font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
-  default_fallback_font <- system(sprintf("fc-match -f '%%{family}' %s", fallback_font), intern = TRUE)
+  font_family = get_font_family(available_fonts, custom_font, fallback_font)
 
   # import and load fonts
   # suppress messages, below will handle incorrect loading
-  available_fonts <- extrafont::fonts()
-
   suppressMessages({
-    font_to_import <- custom_font
-    if (!(custom_font %in% available_fonts)) {
-      font_to_import <- default_fallback_font
-    }
-    invisible(utils::capture.output(extrafont::font_import(pattern = font_to_import, prompt = FALSE)))
+    invisible(utils::capture.output(extrafont::font_import(pattern = font_family, prompt = FALSE)))
     invisible(utils::capture.output(extrafont::loadfonts(device = "pdf", quiet = TRUE)))
   })
 
