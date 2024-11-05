@@ -86,14 +86,6 @@ SEMIBOLD_FONT <- "Suisse Int'l Semi Bold"
 MEDIUM_FONT <- "Suisse Int'l Medium"
 MONO_FONT <- "Suisse Int'l Mono"
 
-# axis label fonts which differ for categorical and numerical data
-CATEGORICAL_FONT <- REGULAR_FONT
-NUMERICAL_FONT <- MONO_FONT
-
-# main font types
-AXIS_TITLE_FONT <- MEDIUM_FONT
-KEY_TITLE <- SEMIBOLD_FONT
-
 # Use OS default sans fallback if Suisse is not installed
 FONT <- NULL
 if (!("Suisse" %in% extrafont::fonts())) {
@@ -102,11 +94,15 @@ if (!("Suisse" %in% extrafont::fonts())) {
   SEMIBOLD_FONT <- FONT
   MEDIUM_FONT <- FONT
   MONO_FONT <- FONT
-  CATEGORICAL_FONT <- FONT
-  NUMERICAL_FONT <- FONT
-  AXIS_TITLE_FONT <- FONT
-  KEY_TITLE <- FONT
 }
+
+# axis label fonts which differ for categorical and numerical data
+CATEGORICAL_FONT <- REGULAR_FONT
+NUMERICAL_FONT <- MONO_FONT
+
+# main font types
+AXIS_TITLE_FONT <- MEDIUM_FONT
+KEY_TITLE <- SEMIBOLD_FONT
 
 # background fill options
 BACKGROUND_FILL <- "#FDF8F2"
