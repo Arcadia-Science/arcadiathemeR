@@ -24,8 +24,6 @@
 #'   theme_arcadia()
 #' }
 
-source("load_fonts.R")
-
 theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", background = TRUE, padding = c(.25, .25, .25, .25)) {
 
   # font types
@@ -82,7 +80,6 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
 }
 
 # font constants
-FONT = get_font_family(extrafont::fonts(), "Suisse", "sans")
 REGULAR_FONT <- paste(FONT, "Int'l")
 SEMIBOLD_FONT <- paste(FONT, "Int'l Semi Bold")
 MEDIUM_FONT <- paste(FONT, "Int'l Medium")
