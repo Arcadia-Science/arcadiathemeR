@@ -10,26 +10,23 @@
 load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
   # define font names to check for
   font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
-  default_sans_font <- system("fc-match -f '%{family}' sans", intern = TRUE)
+  default_fallback_font <- system(sprintf("fc-match -f '%%{family}' %s", fallback_font), intern = TRUE)
 
   # import and load fonts
-  # supress messages, below will handle incorrect loading
+  # suppress messages, below will handle incorrect loading
+  available_fonts <- extrafont::fonts()
+
   suppressMessages({
-    tryCatch(
-      {
-        invisible(utils::capture.output(extrafont::font_import(pattern = custom_font, prompt = FALSE)))
-      },
-      error = function(e) {
-        invisible(utils::capture.output(extrafont::font_import(pattern = default_sans_font, prompt = FALSE)))
-      },
-      finally = {
-        invisible(utils::capture.output(extrafont::loadfonts(device = "pdf", quiet = TRUE)))
-      }
-    )
+    available_fonts <- extrafont::fonts()
+    font_to_import <- custom_font
+    if (!(custom_font %in% available_fonts)) {
+      font_to_import <- default_fallback_font
+    }
+    invisible(utils::capture.output(extrafont::font_import(pattern = font_to_import, prompt = FALSE)))
+    invisible(utils::capture.output(extrafont::loadfonts(device = "pdf", quiet = TRUE)))
   })
 
   # check if custom font available
-  available_fonts <- extrafont::fonts()
   missing_fonts <- setdiff(font_names, available_fonts)
   if (length(missing_fonts) == 0) {
     cat(sprintf("All custom fonts '%s' are successfully loaded.\n", paste(font_names, collapse = ", ")))
