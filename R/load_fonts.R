@@ -14,6 +14,11 @@ load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
     font_family <- system(sprintf("fc-match -f '%%{family}' %s", fallback_font), intern = TRUE)
   }
 
+  # Ubuntu returns "DejaVu Sans" while R looks for "DejaVuSans", so remove spaces
+  if (Sys.info()["sysname"] == "Linux") {
+    font_family <- gsub(" ", "", font_family)
+  }
+
   # import and load fonts
   # suppress messages, below will handle incorrect loading
   suppressMessages({
