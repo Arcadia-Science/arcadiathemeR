@@ -83,10 +83,10 @@ FONT <- "Suisse"
 if (!(FONT %in% extrafont::fonts())) {
   FONT <- system("fc-match -f '%%{family}' sans", intern = TRUE)
 }
-REGULAR_FONT <- paste(FONT, "Int'l")
-SEMIBOLD_FONT <- paste(FONT, "Int'l Semi Bold")
-MEDIUM_FONT <- paste(FONT, "Int'l Medium")
-MONO_FONT <- paste(FONT, "Int'l Mono")
+REGULAR_FONT <- sprintf("%s Int'l", FONT)
+SEMIBOLD_FONT <- sprintf("%s Int'l Semi Bold", FONT)
+MEDIUM_FONT <- sprintf("%s Int'l Medium", FONT)
+MONO_FONT <- sprintf("%s Int'l Mono", FONT)
 
 # axis label fonts which differ for categorical and numerical data
 CATEGORICAL_FONT <- REGULAR_FONT
