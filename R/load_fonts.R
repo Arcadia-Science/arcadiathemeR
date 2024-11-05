@@ -17,7 +17,6 @@ load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
   available_fonts <- extrafont::fonts()
 
   suppressMessages({
-    available_fonts <- extrafont::fonts()
     font_to_import <- custom_font
     if (!(custom_font %in% available_fonts)) {
       font_to_import <- default_fallback_font
