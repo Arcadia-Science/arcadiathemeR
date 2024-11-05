@@ -81,7 +81,7 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
 # font constants
 FONT <- "Suisse"
 if (!(FONT %in% extrafont::fonts())) {
-  FONT <- system("fc-match -f '%%{family}' sans", intern = TRUE)
+  FONT <- system("fc-match -f '%{family}' sans", intern = TRUE)
 }
 REGULAR_FONT <- sprintf("%s Int'l", FONT)
 SEMIBOLD_FONT <- sprintf("%s Int'l Semi Bold", FONT)
