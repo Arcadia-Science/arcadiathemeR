@@ -95,6 +95,7 @@ AXIS_TITLE_FONT <- MEDIUM_FONT
 KEY_TITLE <- SEMIBOLD_FONT
 
 # Use OS default sans fallback if Suisse is not installed
+FONT <- NULL
 if (!("Suisse" %in% extrafont::fonts())) {
   FONT <- system("fc-match -f '%{family}' sans", intern = TRUE)
   REGULAR_FONT <- FONT
