@@ -88,7 +88,7 @@ MONO_FONT <- "Suisse Int'l Mono"
 
 # Use OS default sans fallback if Suisse is not installed
 FONT <- NULL
-if (!("Suisse" %in% extrafont::fonts())) {
+if (!(REGULAR_FONT %in% extrafont::fonts())) {
   FONT <- system("fc-match -f '%{family}' sans", intern = TRUE)
   REGULAR_FONT <- FONT
   SEMIBOLD_FONT <- FONT

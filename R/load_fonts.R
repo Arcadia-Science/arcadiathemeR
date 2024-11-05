@@ -10,7 +10,7 @@ load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
   # check if custom font available
   font_family <- custom_font
 
-  if (!(custom_font %in% extrafont::fonts())) {
+  if (!("Suisse Int'l" %in% extrafont::fonts())) {
     font_family <- system(sprintf("fc-match -f '%%{family}' %s", fallback_font), intern = TRUE)
     # Ubuntu returns "DejaVu Sans" while R looks for "DejaVuSans", so remove spaces
     if (Sys.info()["sysname"] == "Linux") {
