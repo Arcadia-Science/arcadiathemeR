@@ -1,31 +1,37 @@
 #' Load in custom fonts
 #'
-#' @param font Font family name to be loaded in
+#' @param custom_font Font family name to be loaded in
 #' @param fallback_font Font family name to be used in case custom font not available
 #'
 #' @return Custom font families or fallback font to use in plots.
 #' @export
 #'
-load_arcadia_fonts <- function(font = "Suisse", fallback_font = "sans") {
-  # Check if custom font is installed on the system
-  # If not installed, use the OS default fallback font
-  font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
-
-  if (!(font_names[1] %in% extrafont::fonts())) {
-    font <- system(sprintf("fc-match -f '%%{family}' %s", fallback_font), intern = TRUE)
-    # Ubuntu returns "DejaVu Sans" while R looks for "DejaVuSans", so remove spaces
-    if (Sys.info()["sysname"] == "Linux") {
-      font <- gsub(" ", "", font)
-    }
-  }
-
+load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
   # Import and load fonts
   suppressMessages({
-    invisible(utils::capture.output(extrafont::font_import(pattern = font, prompt = FALSE)))
-    invisible(utils::capture.output(extrafont::loadfonts(device = "pdf", quiet = TRUE)))
+    tryCatch(
+      # Try to import custom font
+      {
+        invisible(utils::capture.output(extrafont::font_import(pattern = custom_font, prompt = FALSE)))
+      },
+      # If custom font is not found, import the OS default for fallback font
+      error = function(e) {
+        font <- system(sprintf("fc-match -f '%%{family}' %s", fallback_font), intern = TRUE)
+        # Ubuntu returns "DejaVu Sans" while R looks for "DejaVuSans", so remove spaces
+        if (Sys.info()["sysname"] == "Linux") {
+          font <- gsub(" ", "", font)
+        }
+        invisible(utils::capture.output(extrafont::font_import(pattern = font, prompt = FALSE)))
+      },
+      # Once imported, load fonts
+      finally = {
+        invisible(utils::capture.output(extrafont::loadfonts(device = "pdf", quiet = TRUE)))
+      }
+    )
   })
 
   # Check if custom fonts were successfully loaded
+  font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
   available_fonts <- extrafont::fonts()
   missing_fonts <- setdiff(font_names, available_fonts)
 
