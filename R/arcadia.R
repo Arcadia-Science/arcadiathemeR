@@ -39,16 +39,17 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
   y_axis_size <- if (y_axis_type == "categorical") 15 else 14.5
 
   # axis ticks
-  x_axis_ticks <- if (x_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.35) # size ratio to pts is 2.13, so .75 in pts is .35 here
-  y_axis_ticks <- if (y_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.35) # size ratio to pts is 2.13, so .75 in pts is .35 here
+  # size ratio to pts is 2.13, so .75 in pts is .35 here
+  x_axis_ticks <- if (x_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.35)
+  # size ratio to pts is 2.13, so .75 in pts is .35 here
+  y_axis_ticks <- if (y_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.35)
 
   # background fill
   background_color <- if (background == TRUE) BACKGROUND_FILL else 'transparent'
 
   ggplot2::theme_minimal() +
-
-    # font specifications
   ggplot2::theme(
+    # font specifications
     plot.title = ggplot2::element_text(family = REGULAR_FONT, size = 16, face = "bold"),
     axis.title.x = ggplot2::element_text(family = x_axis_label_family, size = 15, vjust = -1),
     axis.title.y = ggplot2::element_text(family = y_axis_label_family, size = 15, vjust = +2),
@@ -56,7 +57,6 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
     axis.text.y = ggplot2::element_text(family = y_axis_family, size = y_axis_size, color = "black"),
     legend.title = ggplot2::element_text(family = legend_label_family, size = 16),
     legend.text = ggplot2::element_text(family = legend_text_family, size = 15),
-
 
     # background specifications
     plot.background = ggplot2::element_rect(fill = background_color, color = NA),
@@ -68,15 +68,16 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
     # tick specifications
     axis.ticks.x = x_axis_ticks,
     axis.ticks.y = y_axis_ticks,
-    axis.ticks.length.x = ggplot2::unit(0.07, "in"), # 5 pixels is roughly 0.07 inches
+    # 5 pixels is roughly 0.07 inches
+    axis.ticks.length.x = ggplot2::unit(0.07, "in"),
     axis.ticks.length.y = ggplot2::unit(0.07, "in"),
-    axis.line = ggplot2::element_line(color="black", size=0.35), # size ratio to pts is 2.13, so .75 in pts is .35 here
+    # size ratio to pts is 2.13, so .75 in pts is .35 here
+    axis.line = ggplot2::element_line(color="black", size=0.35),
 
     # legend specifications
     legend.background = ggplot2::element_rect(fill = background_color, color = NA),
     plot.margin = ggplot2::unit(padding, "in")
-
-    )
+  )
 }
 
 # font constants
@@ -84,6 +85,15 @@ REGULAR_FONT <- "Suisse Int'l"
 SEMIBOLD_FONT <- "Suisse Int'l Semi Bold"
 MEDIUM_FONT <- "Suisse Int'l Medium"
 MONO_FONT <- "Suisse Int'l Mono"
+
+# Use OS default sans fallback if Suisse is not installed
+if (!(REGULAR_FONT %in% extrafont::fonts())) {
+  FONT <- system("fc-match -f '%{family}' sans", intern = TRUE)
+  REGULAR_FONT <- FONT
+  SEMIBOLD_FONT <- FONT
+  MEDIUM_FONT <- FONT
+  MONO_FONT <- FONT
+}
 
 # axis label fonts which differ for categorical and numerical data
 CATEGORICAL_FONT <- REGULAR_FONT

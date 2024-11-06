@@ -1,4 +1,3 @@
-
 #' Load in custom fonts
 #'
 #' @param custom_font Font family name to be loaded in
@@ -8,19 +7,34 @@
 #' @export
 #'
 load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
-  # define font names to check for
-  font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
-
-  # import and load fonts
-  # supress messages, below will handle incorrect loading
+  # Import and load fonts
   suppressMessages({
-    invisible(utils::capture.output(extrafont::font_import(pattern = custom_font, prompt = FALSE)))
-    invisible(utils::capture.output(extrafont::loadfonts(device = "pdf", quiet = TRUE)))
+    tryCatch(
+      # Try to import custom font
+      {
+        invisible(utils::capture.output(extrafont::font_import(pattern = custom_font, prompt = FALSE)))
+      },
+      # If custom font is not found, import the OS default for fallback font
+      error = function(e) {
+        font <- system(sprintf("fc-match -f '%%{family}' %s", fallback_font), intern = TRUE)
+        # Ubuntu returns "DejaVu Sans" while R looks for "DejaVuSans", so remove spaces
+        if (Sys.info()["sysname"] == "Linux") {
+          font <- gsub(" ", "", font)
+        }
+        invisible(utils::capture.output(extrafont::font_import(pattern = font, prompt = FALSE)))
+      },
+      # Once imported, load fonts
+      finally = {
+        invisible(utils::capture.output(extrafont::loadfonts(device = "pdf", quiet = TRUE)))
+      }
+    )
   })
 
-  # check if custom font available
+  # Check if custom fonts were successfully loaded
+  font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
   available_fonts <- extrafont::fonts()
   missing_fonts <- setdiff(font_names, available_fonts)
+
   if (length(missing_fonts) == 0) {
     cat(sprintf("All custom fonts '%s' are successfully loaded.\n", paste(font_names, collapse = ", ")))
     return(font_names)
