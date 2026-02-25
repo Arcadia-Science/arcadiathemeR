@@ -4,7 +4,7 @@
 \alias{load_arcadia_fonts}
 \title{Load in custom fonts}
 \usage{
-load_arcadia_fonts(custom_font = "Suisse", fallback_font = "sans")
+load_arcadia_fonts(custom_font = "Atkinson Hyperlegible", fallback_font = "sans")
 }
 \arguments{
 \item{custom_font}{Font family name to be loaded in}

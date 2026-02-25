@@ -40,9 +40,9 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
 
   # axis ticks
   # size ratio to pts is 2.13, so .75 in pts is .35 here
-  x_axis_ticks <- if (x_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.35)
+  x_axis_ticks <- if (x_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", linewidth = 0.35)
   # size ratio to pts is 2.13, so .75 in pts is .35 here
-  y_axis_ticks <- if (y_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", size = 0.35)
+  y_axis_ticks <- if (y_axis_type == "categorical") ggplot2::element_blank() else ggplot2::element_line(color="black", linewidth = 0.35)
 
   # background fill
   background_color <- if (background == TRUE) BACKGROUND_FILL else 'transparent'
@@ -72,7 +72,7 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
     axis.ticks.length.x = ggplot2::unit(0.07, "in"),
     axis.ticks.length.y = ggplot2::unit(0.07, "in"),
     # size ratio to pts is 2.13, so .75 in pts is .35 here
-    axis.line = ggplot2::element_line(color="black", size=0.35),
+    axis.line = ggplot2::element_line(color="black", linewidth=0.35),
 
     # legend specifications
     legend.background = ggplot2::element_rect(fill = background_color, color = NA),
@@ -81,12 +81,12 @@ theme_arcadia <- function(x_axis_type = "numerical", y_axis_type = "numerical", 
 }
 
 # font constants
-REGULAR_FONT <- "Suisse Int'l"
-SEMIBOLD_FONT <- "Suisse Int'l Semi Bold"
-MEDIUM_FONT <- "Suisse Int'l Medium"
-MONO_FONT <- "Suisse Int'l Mono"
+REGULAR_FONT <- "Atkinson Hyperlegible Next"
+SEMIBOLD_FONT <- "Atkinson Hyperlegible Next SemiBold"
+MEDIUM_FONT <- "Atkinson Hyperlegible Next Medium"
+MONO_FONT <- "Atkinson Hyperlegible Mono"
 
-# Use OS default sans fallback if Suisse is not installed
+# Use OS default sans fallback if Atkinson Hyperlegible is not installed
 if (!(REGULAR_FONT %in% extrafont::fonts())) {
   FONT <- system("fc-match -f '%{family}' sans", intern = TRUE)
   REGULAR_FONT <- FONT

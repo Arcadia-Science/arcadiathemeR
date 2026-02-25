@@ -15,14 +15,19 @@ installing the `arcadiathemeR` package.
 remotes::install_github("Arcadia-Science/arcadiathemeR")
 ```
 
-To use the custom fonts you need to download the `TTF` formatted font
-files and place in the `Users/YOURUSERNAME/Library/Fonts/` directory.
-You can also download the fonts and double click on them to install
-using FontBook with Mac OS. Check out the Arcadia Science Brand Assets
-page in Notion to find these. This should only need to be performed once
-even if the package is updated over time. If the custom font isn’t
-available then the `sans` font type will be used insetad. These steps
-and functionality have only been confirmed to work on Mac OS.
+To use the custom fonts you need to install [Atkinson Hyperlegible
+Next](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Next) and
+[Atkinson Hyperlegible
+Mono](https://fonts.google.com/specimen/Atkinson+Hyperlegible+Mono) from
+Google Fonts. Click “Get font,” “Download all,” then install the `.ttf`
+files from the `static/` folder inside each zip (double-click to install
+via FontBook on macOS, or copy them to `~/Library/Fonts/`). Note: the
+`extrafont` package requires the static TTF files – do not use the
+variable font files in the zip root. This should only need to be
+performed once even if the package is updated over time. If the custom
+fonts are not available then the system `sans` font will be used as a
+fallback. These steps and functionality have only been confirmed to work
+on macOS.
 
 ## Usage
 
@@ -42,8 +47,8 @@ are two main functions to layer on top of existing `ggplot2` plots, the
 ``` r
 library(ggplot2)
 library(arcadiathemeR)
-#> Loading Suisse fonts...
-#> All custom fonts 'Suisse Int'l, Suisse Int'l Semi Bold, Suisse Int'l Medium, Suisse Int'l Mono' are successfully loaded.
+#> Loading fonts...
+#> All custom fonts 'Atkinson Hyperlegible Next, Atkinson Hyperlegible Next SemiBold, Atkinson Hyperlegible Next Medium, Atkinson Hyperlegible Mono' are successfully loaded.
 
 ggplot(data=mtcars, aes(x=hp, y=mpg, color=as.factor(cyl))) +
   geom_point(size=2.5) +
