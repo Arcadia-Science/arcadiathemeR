@@ -6,7 +6,7 @@
 #' @return Custom font families or fallback font to use in plots.
 #' @export
 #'
-load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
+load_arcadia_fonts <- function(custom_font = "Atkinson Hyperlegible", fallback_font = "sans") {
   # Import and load fonts
   suppressMessages({
     tryCatch(
@@ -31,7 +31,7 @@ load_arcadia_fonts <- function(custom_font = "Suisse", fallback_font = "sans") {
   })
 
   # Check if custom fonts were successfully loaded
-  font_names <- c("Suisse Int'l", "Suisse Int'l Semi Bold", "Suisse Int'l Medium", "Suisse Int'l Mono")
+  font_names <- c("Atkinson Hyperlegible Next", "Atkinson Hyperlegible Next SemiBold", "Atkinson Hyperlegible Next Medium", "Atkinson Hyperlegible Mono")
   available_fonts <- extrafont::fonts()
   missing_fonts <- setdiff(font_names, available_fonts)
 
